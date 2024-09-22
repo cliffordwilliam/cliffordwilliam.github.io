@@ -1,6 +1,10 @@
-{% capture words %}
-{{ content | number_of_words | minus: 180 }}
+{% capture word_count %}
+{{ content | number_of_words }}
 {% endcapture %}
-{% unless words contains '-' %}
-{{ words | plus: 150 | divided_by: 150 | append: ' minutes to read' }}
-{% endunless %}
+
+{% assign minutes_to_read = word_count | minus: 180 | divided_by: 150 %}
+{% if minutes_to_read > 0 %}
+  {{ minutes_to_read | round: 0 }} minutes to read
+{% else %}
+  Less than 1 minute to read
+{% endif %}
