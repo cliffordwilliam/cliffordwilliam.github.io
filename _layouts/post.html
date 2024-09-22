@@ -3,6 +3,7 @@ layout: default
 ---
 
 <small>{{ page.date | date: "%-d %B %Y" }}</small>
+<small>{% include reading-time.html %}</small>
 <h1>{{ page.title }}</h1>
 
 <p class="view">by {{ page.author | default: site.author }}</p>
@@ -14,4 +15,3 @@ layout: default
 {% endif %}
 
 {% include utterances.html %}
-
