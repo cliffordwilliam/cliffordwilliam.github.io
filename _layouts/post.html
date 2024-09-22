@@ -13,10 +13,5 @@ layout: default
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
 {% endif %}
 
-<script src="https://utteranc.es/client.js"
-        repo="cliffordwilliam/cliffordwilliam.github.io"
-        issue-term="pathname"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
+{% include utterances.html %}
+

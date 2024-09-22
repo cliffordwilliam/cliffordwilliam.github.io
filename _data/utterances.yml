@@ -1,0 +1,4 @@
+utterances:
+  repo: cliffordwilliam/cliffordwilliam.github.io
+  issue_term: pathname  # TODO: switch to 'url' after my domain is verified
+  theme: github-light
