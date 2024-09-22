@@ -1,3 +1,18 @@
-theme: minima
-title: Clifford William's homepage
+theme: minima  # how come minimal is named jekyll-theme-minima then?
+title: Clifford William
 description: Bookmark this to keep an eye on my project updates!
+minima:
+  skin: dark
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
