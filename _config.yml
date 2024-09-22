@@ -1,17 +1,3 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-minima
 title: Clifford William's homepage
 description: Bookmark this to keep an eye on my project updates!
-show_downloads: true
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  -
-    scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: "post"
