@@ -27,6 +27,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% include subscribe-form.html %}
+
   {% include utterances.html %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
