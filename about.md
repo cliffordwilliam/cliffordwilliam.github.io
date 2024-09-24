@@ -22,4 +22,4 @@ I created this site to share my journey, collect and organize the knowledge I’
 - **Backend**: Python, Django, Flask, Jekyll
 - **Other Tools**: Git, GitHub, Pygame
 
-Feel free to explore my [projects](/projects), read my [blog](/blog), or connect with me on [LinkedIn](https://www.linkedin.com/in/clifford-william).
+Feel free to explore my [projects](/projects), read my [blog](/blog), or connect with me on [LinkedIn](https://my.linkedin.com/in/clifford-william-05bb4220b).
