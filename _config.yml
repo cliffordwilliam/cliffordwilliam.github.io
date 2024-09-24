@@ -1,7 +1,10 @@
 # https://pages.github.com/versions/
 # GitHub Pages uses very old versions
 # https://github.com/jekyll/minima/releases/tag/v2.5.1
-theme: minima
+# Not defining the theme makes GitHub Pages Jekyll build process include primer theme
+# Defning it with null should do it
+# https://github.com/jekyll/jekyll/issues/7478
+theme: null
 title: Clifford William
 description: Bookmark this to keep an eye on my project updates!
 defaults:
