@@ -2,34 +2,32 @@
 layout: default
 ---
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-        {%- endif -%}
+  <header>
+    <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+    <p>
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ post.date | date: site.date_format }}
+        </time>
         • 
         <span>{% include reading-time.html %}</span>
-      </p>
+    </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody"></div>
+  <div itemprop="articleBody"></div>
     <!-- TODO: Increate wrapper and .utterances max lenght -->
     <!-- TODO: Make this flex wrap reverse with sticky top -->
-    <h2>Table of Contents</h2>
-    {% include toc.html html=content %}
-    {{ content }}
+    <div>
+        <h2>Table of Contents</h2>
+        {% include toc.html html=content %}
+    </div>
+    <div>
+        {{ content }}
+    </div>
   </div>
-
-  {% include subscribe-form.html %}
 
   {% include utterances.html %}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <a href="{{ page.url | relative_url }}" hidden></a>
 </article>

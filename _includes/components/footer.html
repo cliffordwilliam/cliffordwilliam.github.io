@@ -1,0 +1,15 @@
+<footer id="site-footer">
+    <div>
+        {% include logo.html %}
+        <p>&copy; {{ "now" | date: "%Y" }} Clifford William. All rights reserved.</p>
+    </div>
+    <nav>
+        <h2>Page</h2>
+        {% include navigation.html %}
+    </nav>
+    <nav>
+        <h2>Follow</h2>
+        {% include follow.html %}
+    </nav>
+    {% include newsletter.html %}        
+</footer>

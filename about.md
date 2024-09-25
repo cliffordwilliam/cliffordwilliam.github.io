@@ -1,5 +1,7 @@
 ---
 title: "About Me"
+sub-title: "Welcome!"
+thumbnail: "dasdsa"
 ---
 
 # About Me

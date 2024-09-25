@@ -1,0 +1,8 @@
+<svg id="cross" width="23" height="24" viewBox="0 0 23 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect y="21.8995" width="30" height="2" transform="rotate(-45 0 21.8995)" fill="#fff">
+    </rect>
+    <rect x="1.41418" y="0.686279" width="30" height="2" transform="rotate(45 1.41418 0.686279)"
+        fill="#fff">
+    </rect>
+</svg>

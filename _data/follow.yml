@@ -1,0 +1,8 @@
+- name: GitHub
+  link: "/"
+- name: LinkedIn
+  link: "/blog.html"
+- name: Twitter
+  link: "/tags.html"
+- name: Facebbok
+  link: "/about.html"

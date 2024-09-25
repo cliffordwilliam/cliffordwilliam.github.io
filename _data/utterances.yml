@@ -1,4 +1,3 @@
-utterances:
-  repo: cliffordwilliam/cliffordwilliam.github.io
-  issue_term: url
-  theme: github-light
+repo: cliffordwilliam/cliffordwilliam.github.io
+issue_term: url
+theme: github-light
