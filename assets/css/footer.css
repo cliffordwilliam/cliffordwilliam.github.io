@@ -52,10 +52,6 @@
 }
 
 @media (max-width: 768px) {
-    #site-footer nav {
-        flex-basis: 100%;
-    }
-    
     #site-footer div {
         flex-basis: 100%;
     }
