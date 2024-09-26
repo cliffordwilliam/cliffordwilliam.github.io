@@ -38,7 +38,7 @@
     color: #aaa;
 }
 
-@media (max-width: 684px) {
+@media (max-width: 768px) {
     #site-footer nav {
         flex-basis: 100%;
     }
