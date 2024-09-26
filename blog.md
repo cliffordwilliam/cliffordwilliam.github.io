@@ -4,6 +4,4 @@ sub-title: "Blog!"
 thumbnail: "dasdsa"
 ---
 
-# Blog
-
 dsadsdsa
