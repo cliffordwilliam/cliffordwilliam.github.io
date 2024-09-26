@@ -98,3 +98,9 @@
         margin-right: 18px;
     }
 }
+
+a[aria-current="page"] {
+    color: #323232;
+    font-weight: 700;
+  }
+  
