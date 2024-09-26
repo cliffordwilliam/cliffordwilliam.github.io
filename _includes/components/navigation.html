@@ -3,6 +3,8 @@
     <li>
       <a href="{{ item.link }}" {% if page.link==item.link %}aria-current="page"{% endif %}>
         {{ item.name }}
+        {{ page.link }}
+        {{ item.link }}
       </a>
     </li>
     {% endfor %}
