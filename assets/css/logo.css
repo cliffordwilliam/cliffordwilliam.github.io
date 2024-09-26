@@ -1,6 +1,6 @@
 .logo {
     font-size: 3rem;
     font-weight: 600;
-    color: #000;
-    display: block;
+    color: #000 !important;
+    display: block !important;
 }
