@@ -38,6 +38,19 @@
     color: #aaa;
 }
 
+#site-footer div {
+    flex: 2;
+}
+
+#site-footer nav {
+    flex: 1;
+}
+
+#site-footer form {
+    flex: 2;
+    flex-basis: content;
+}
+
 @media (max-width: 768px) {
     #site-footer nav {
         flex-basis: 100%;
@@ -51,19 +64,6 @@
         flex-basis: 100%;
     }
 
-}
-
-#site-footer div {
-    flex: 2;
-}
-
-#site-footer nav {
-    flex: 1;
-}
-
-#site-footer form {
-    flex: 2;
-    flex-basis: content;
 }
 
 #site-footer input {
