@@ -12,12 +12,12 @@
 
 #site-footer h2 {
     margin-top: 0;
-    font-size: 1em;
-    font-weight: 700;
+    font-size: .9em;
+    font-weight: 400;
 }
 
 #site-footer form h2 {
-    font-size: .9em;
+    font-size: 1.5em;
     font-weight: 400;
 }
 
@@ -28,7 +28,7 @@
 }
 
 #site-footer a {
-    display: block;
+    display: inline-block;
     color: #464646;
     font-size: .9em;
     border-bottom: 1px dotted #aaa;
