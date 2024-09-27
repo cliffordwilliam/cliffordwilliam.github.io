@@ -17,25 +17,37 @@
 }
 
 #site-footer form h2 {
-    font-size: 1.75em;
-    font-weight: 100;
+    font-size: .9em;
+    font-weight: 400;
 }
 
 #site-footer div p {
     margin-bottom: 0;
     margin-top: 0.5em;
+    font-size: .8em;
 }
 
 #site-footer a {
     display: block;
-    border: none;
-    color: #4a4a4a;
+    color: #464646;
+    font-size: .9em;
+    border-bottom: 1px dotted #aaa;
+}
+
+#site-footer a[aria-current="page"] {
+    pointer-events: none;
+    cursor: default;
+    color: #464646;
+    font-size: .9em;
+    font-weight: normal;
+    border-bottom: 1px dashed #323232;
 }
 
 #site-footer a:hover {
-    display: block;
-    border: none;
-    color: #aaa;
+    color: #464646;
+    font-size: .9em;
+    font-weight: normal;
+    border-bottom: 1px dashed #323232;
 }
 
 #site-footer div {
@@ -49,6 +61,7 @@
 #site-footer form {
     flex: 2;
     flex-basis: content;
+    max-width: 20em;
 }
 
 @media (max-width: 768px) {

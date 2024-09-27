@@ -149,98 +149,59 @@ th {
     border-bottom: 1px solid #f1f1f1;
 }
 
-input,
-textarea {
+input {
     border: 1px solid #4a4a4a;
 }
 
-input:focus,
-textarea:focus {
+input:focus {
     border: 1px solid #1d7484;
 }
 
-textarea {
-    width: 100%;
-}
-
-.button,
-button,
-input[type=submit],
-input[type=reset],
-input[type=button],
-input[type=file]::file-selector-button {
+button {
     display: inline-block;
-    padding: 5px 10px;
+    padding: .5em 1.25em;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    background-color: #1d7484;
-    color: #f9f9f9;
+    background-color: #000;
+    color: #fff;
+    border-radius: 99em;
     border-radius: 8px;
-    border: 1px solid #1d7484;
+    border: 1px solid #000;
     cursor: pointer;
     box-sizing: border-box;
 }
 
-.button[disabled],
-button[disabled],
-input[type=submit][disabled],
-input[type=reset][disabled],
-input[type=button][disabled],
-input[type=file]::file-selector-button[disabled] {
-    cursor: default;
-    opacity: 0.5;
-}
-
-.button:hover,
-button:hover,
-input[type=submit]:hover,
-input[type=reset]:hover,
-input[type=button]:hover,
-input[type=file]::file-selector-button:hover {
+button:hover {
     background-color: #982c61;
     color: #f9f9f9;
     outline: 0;
 }
 
-.button:focus-visible,
-button:focus-visible,
-input[type=submit]:focus-visible,
-input[type=reset]:focus-visible,
-input[type=button]:focus-visible,
-input[type=file]::file-selector-button:focus-visible {
+button:focus-visible {
     outline-style: solid;
     outline-width: 2px;
 }
 
-textarea,
-select,
 input {
     color: #4a4a4a;
-    padding: 6px 10px;
+    padding: .7em .7em;
     margin-bottom: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #f1f1f1;
-    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 10px;
     box-shadow: none;
     box-sizing: border-box;
+    font-size: 1em;
 }
 
-textarea:focus,
-select:focus,
 input:focus {
     border: 1px solid #1d7484;
     outline: 0;
 }
 
-input[type=checkbox]:focus {
-    outline: 1px dotted #1d7484;
-}
-
-label,
-legend,
-fieldset {
-    display: block;
+label {
+    display: none;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
