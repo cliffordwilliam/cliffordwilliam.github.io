@@ -6,7 +6,7 @@
 {%- assign margin_top = include.margin-top | default: 0 -%}
 
 {%- if site.posts.size > 0 -%}
-<div {% if use_grid == 1 %}class="grid-container{% if margin_top != 0 %} margin-top{% endif %}"{% endif %}></div>
+<div {% if use_grid == 1 %}class="grid-container{% if margin_top != 0 %} margin-top{% endif %}"{% endif %}>
     {%- assign posts_to_display = site.posts -%}
     {%- if category_name -%}
         {%- assign posts_to_display = site.categories[category_name] -%}
