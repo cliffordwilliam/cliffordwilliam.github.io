@@ -1,7 +1,5 @@
 ---
 title: "About Me"
-sub-title: "Welcome!"
-thumbnail: "dasdsa"
 ---
 
 Hi, I’m **Clifford William**, a **Full Stack Developer** based in **Indonesia**. I enjoy building software solutions and collecting knowledge from various aspects of life. My expertise spans both frontend and backend technologies, and I am always eager to learn new things.

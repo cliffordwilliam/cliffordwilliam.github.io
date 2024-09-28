@@ -3,7 +3,6 @@ title: "Test Post Again"
 thumbnail: "https://i.postimg.cc/26qvHZW1/luca-bravo-XJXWbf-So2f0-unsplash.jpg"
 categories: 
   - "Personal"
-  - "Technology"
 ---
 
 This is the introduction section of the test post.

@@ -2,10 +2,16 @@
 {%- assign post_offset = include.offset | default: 0 -%}
 {%- assign show_excerpt = include.excerpt | default: 1 -%}
 {%- assign use_grid = include.grid | default: 1 -%}
+{%- assign category_filter = include.category | default: nil -%}
 
 {%- if site.posts.size > 0 -%}
-<div {% if use_grid==1 %}class="grid-container"{% endif %}>
-    {%- for post in site.posts offset: post_offset limit: post_limit -%}
+<div {% if use_grid == 1 %}class="grid-container"{% endif %}>
+    {%- assign posts_to_display = site.posts -%}
+    {%- if category_filter -%}
+        {%- assign posts_to_display = site.posts | where: "categories", category_filter -%}
+    {%- endif -%}
+    
+    {%- for post in posts_to_display offset: post_offset limit: post_limit -%}
     <div class="post-card">
         <img width="500" height="500" src="{{ post.thumbnail }}" alt="{{ post.thumbnail }}">
         <div>

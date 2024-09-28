@@ -1,8 +1,8 @@
 - name: Home
   link: "/"
-- name: Blog
-  link: "/blog.html"
-- name: Tags
-  link: "/tags.html"
+- name: Technology
+  link: "/technology.html"
+- name: Personal
+  link: "/personal.html"
 - name: About
   link: "/about.html"
