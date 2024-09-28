@@ -9,7 +9,7 @@ layout: default
         <img width="500" height="500" src="{{ page.thumbnail }}" alt="{{ post.thumbnail }}">
     </section>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ post.date | date: site.date_format }}
+        {{ page.date | date: site.date_format }}
     </time>
     • 
     <span>{% include components/reading-time.html %}</span>
