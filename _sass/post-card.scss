@@ -66,8 +66,10 @@
 }
 
 .post-card hr {
-    border: 1px solid #323232;
     margin: 20px 0;
+    height: 0;
+    border: none;
+    border-top: 1px solid #d2d2d2;
 }
 
 .post-card ul {
