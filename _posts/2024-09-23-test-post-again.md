@@ -1,6 +1,6 @@
 ---
 title: "Test Post Again"
-thumbnail: "https://picsum.photos/800/450"
+thumbnail: "https://i.postimg.cc/26qvHZW1/luca-bravo-XJXWbf-So2f0-unsplash.jpg"
 categories: 
   - "Personal"
   - "Technology"
