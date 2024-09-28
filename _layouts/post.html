@@ -26,10 +26,10 @@ layout: default
   </header>
 
   <div itemprop="articleBody" class="thin-container">
-    <div id="toc-container">
+    <aside id="toc-container">
         <h2>Table of Contents</h2>
         {% include components/toc.html html=content h_max=2 %}
-    </div>
+    </aside>
     <div id="post-body">
         {{ content }}
     </div>
