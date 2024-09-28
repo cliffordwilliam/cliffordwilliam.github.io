@@ -7,8 +7,18 @@ div[itemprop="articleBody"] {
 
 div[itemprop="articleBody"] > div:first-child {
     position: sticky;
-    top: 0;
+    top: 1.2em;
     align-self: start;
+}
+
+div[itemprop="articleBody"] > div:first-child ul {
+    border-left: 1px solid #d2d2d2;
+    list-style: none;
+    padding-left: 1em;
+}
+
+div[itemprop="articleBody"] > div:first-child a {
+    font-size: .8em;
 }
 
 div[itemprop="articleBody"] > div:last-child {
