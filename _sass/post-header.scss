@@ -31,5 +31,8 @@
 #post-header div {
     display: flex;
     justify-content: space-between;
+    align-items: start;
     flex-wrap: wrap;
+    gap: .55em;
+    align-items: center;
 }
