@@ -29,7 +29,8 @@
                 <ul>
                     {% for category in post.categories %}
                     <li>
-                        <a class="button" href="#">{{ category }}</a>
+                        {% assign category_slug = category | downcase %}
+                        <a class="button" href="{{ category_slug }}.md">{{ category }}</a>
                     </li>
                     {% endfor %}
                 </ul>
