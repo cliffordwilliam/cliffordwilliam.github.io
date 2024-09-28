@@ -1,5 +1,6 @@
 ---
 title: "Test Post Again"
+thumbnail: "https://picsum.photos/800/450"
 ---
 
 This is the introduction section of the test post.
