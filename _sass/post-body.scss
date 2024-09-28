@@ -5,7 +5,7 @@ div[itemprop="articleBody"] {
     margin-bottom: 6em;
 }
 
-div[itemprop="articleBody"] > div:first-child {
+div[itemprop="articleBody"] > aside:first-child {
     position: sticky;
     top: 1.2em;
     align-self: start;
@@ -19,7 +19,7 @@ div[itemprop="articleBody"] > div:last-child {
     div[itemprop="articleBody"] {
         display: block;
     }
-    div[itemprop="articleBody"] > div:first-child {
+    div[itemprop="articleBody"] > aside:first-child {
         position: static;
     }
 }
