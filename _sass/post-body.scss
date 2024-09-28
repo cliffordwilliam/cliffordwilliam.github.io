@@ -1,7 +1,7 @@
 div[itemprop="articleBody"] {
     display: flex;
     flex-flow: row-reverse;
-    gap: 9em;
+    gap: 5em;
 }
 
 div[itemprop="articleBody"] > div:first-child {
@@ -17,8 +17,6 @@ div[itemprop="articleBody"] > div:last-child {
 @media (max-width: 992px) {
     div[itemprop="articleBody"] {
         display: block;
-        flex-flow: row-reverse;
-        gap: 5em;
     }
     div[itemprop="articleBody"] > div:first-child {
         position: static;
@@ -30,7 +28,7 @@ div[itemprop="articleBody"] > div:first-child h2 {
 }
 
 .thin-container {
-    max-width: 80ch;
+    max-width: 100ch;
     margin-left: auto;
     margin-right: auto;
 }
