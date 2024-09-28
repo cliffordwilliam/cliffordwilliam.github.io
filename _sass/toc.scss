@@ -1,0 +1,27 @@
+#toc-container h2 {
+    font-size: 1em;
+}
+
+#toc-container ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#toc-container li {
+    border-left: 1px solid #d2d2d2;
+    padding: .2em .8em;
+}
+
+#toc-container a {
+    font-size: .8em;
+    color: #6b7280;
+}
+
+#toc-container li.active {
+    background-color: #f3f4f6;
+    border-left-color: #b4dcb4;
+}
+
+#toc-container li.active a {
+    color: #1f2937;
+}
