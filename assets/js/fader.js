@@ -6,6 +6,7 @@ function fadeInPage() {
 
 document.addEventListener('DOMContentLoaded', function () {
     if (!window.AnimationEvent) return;
+    fadeInPage();
     const anchors = document.getElementsByTagName('a');
     for (let idx = 0; idx < anchors.length; idx++) {
         if (
