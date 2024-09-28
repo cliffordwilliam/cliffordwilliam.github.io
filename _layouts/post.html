@@ -8,24 +8,24 @@ layout: default
     <section class="masthead" role="img" aria-label="Image Description">
         <img width="500" height="500" src="{{ page.thumbnail }}" alt="{{ post.thumbnail }}">
     </section>
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {{ page.date | date: site.date_format }}
-    </time>
-    <span>•</span>
-    <span>{% include components/reading-time.html %}</span>
-    <h1 itemprop="name headline">{{ page.title | escape }}</h1>
-    <hr>
-    <div>
-      <p>
-        <span>By</span><br>{{ site.title }}
-      </p>
-      <button>{{ page.categories | first }}</button>
+    <div class="thin-container">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: site.date_format }}
+      </time>
+      <span>•</span>
+      <span>{% include components/reading-time.html %}</span>
+      <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+      <hr>
+      <div>
+        <p>
+          <span>By</span><br>{{ site.title }}
+        </p>
+        <button>{{ page.categories | first }}</button>
+      </div>
     </div>
   </header>
 
-  <div itemprop="articleBody">
-    <!-- TODO: Increate wrapper and .utterances max lenght -->
-    <!-- TODO: Make this flex wrap reverse with sticky top -->
+  <div itemprop="articleBody" class="thin-container">
     <div>
         <h2>Table of Contents</h2>
         {% include components/toc.html html=content %}
