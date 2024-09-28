@@ -2,5 +2,5 @@
 title: "Technology"
 ---
 
-{% include components/post-cards-list.html limit=nil offset=0 excerpt=1 grid=0 category="Technology" %}
+{% include components/post-cards-list.html limit=nil offset=0 excerpt=1 grid=0 category="Technology" margin-top=0 %}
 
