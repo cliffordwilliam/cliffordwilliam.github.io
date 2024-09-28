@@ -2,6 +2,7 @@ div[itemprop="articleBody"] {
     display: flex;
     flex-flow: row-reverse;
     gap: 5em;
+    margin-bottom: 6em;
 }
 
 div[itemprop="articleBody"] > div:first-child {
