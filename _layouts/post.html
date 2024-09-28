@@ -6,12 +6,11 @@ layout: default
 
   <header id="post-header">
     <section class="masthead" role="img" aria-label="Image Description">
-        <img width="500" height="500" src="{{ page.thumbnail }}" alt="{{ post.thumbnail }}">
+      <img width="500" height="500" src="{{ page.thumbnail }}" alt="{{ post.thumbnail }}">
     </section>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: site.date_format }}
+      {{ page.date | date: site.date_format }} •
     </time>
-    • 
     <span>{% include components/reading-time.html %}</span>
     <h1 itemprop="name headline">{{ page.title | escape }}</h1>
     <hr>
@@ -24,15 +23,15 @@ layout: default
   </header>
 
   <div itemprop="articleBody"></div>
-    <!-- TODO: Increate wrapper and .utterances max lenght -->
-    <!-- TODO: Make this flex wrap reverse with sticky top -->
-    <div>
-        <h2>Table of Contents</h2>
-        {% include components/toc.html html=content %}
-    </div>
-    <div>
-        {{ content }}
-    </div>
+  <!-- TODO: Increate wrapper and .utterances max lenght -->
+  <!-- TODO: Make this flex wrap reverse with sticky top -->
+  <div>
+    <h2>Table of Contents</h2>
+    {% include components/toc.html html=content %}
+  </div>
+  <div>
+    {{ content }}
+  </div>
   </div>
 
   {% include components/utterances.html %}
