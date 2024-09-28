@@ -30,9 +30,15 @@
                     {% for category in post.categories %}
                     <li>
                         {% assign category_slug = category | downcase %}
-                        <a class="button" href="{{ category_slug }}.html">{{ category }}</a>
+                        {% if category_slug == 'personal' %}
+                            <a class="button red" href="{{ category_slug }}.html">{{ category }}</a>
+                        {% elsif category_slug == 'technology' %}
+                            <a class="button green" href="{{ category_slug }}.html">{{ category }}</a>
+                        {% else %}
+                            <a class="button" href="{{ category_slug }}.html">{{ category }}</a>
+                        {% endif %}
                     </li>
-                    {% endfor %}
+                    {% endfor %}                    
                 </ul>
             </div>
             {%- if show_excerpt == 1 -%}
