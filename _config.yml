@@ -6,17 +6,17 @@ url: https://cliffordwilliam.com
 date_format: "%b %-d, %Y"
 excerpt_separator: "<!--more-->"
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-  -
-    scope:
+  - scope:
       path: "_posts"
       type: "posts"
     values:
       layout: "post"
 plugins:
   - jekyll-feed
+sass:
+  style: compressed
