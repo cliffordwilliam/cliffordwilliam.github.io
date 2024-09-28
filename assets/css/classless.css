@@ -86,7 +86,7 @@ ul {
 }
 
 li {
-    margin-bottom: 0.4em;
+    margin-bottom: .4em;
 }
 
 blockquote {
@@ -117,14 +117,14 @@ pre {
     overflow-x: auto;
     margin-top: 0px;
     margin-bottom: 2.5rem;
-    font-size: 0.9em;
+    font-size: .9em;
 }
 
 code,
 kbd,
 samp {
-    font-size: 0.9em;
-    padding: 0 0.5em;
+    font-size: .9em;
+    padding: 0 .5em;
     background-color: #f1f1f1;
     white-space: pre-wrap;
 }
@@ -145,7 +145,7 @@ table {
 
 td,
 th {
-    padding: 0.5em;
+    padding: .5em;
     border-bottom: 1px solid #f1f1f1;
 }
 
@@ -157,9 +157,10 @@ input:focus {
     border: 1px solid #1d7484;
 }
 
-button {
+.button, button {
     display: inline-block;
     padding: .5em 1.25em;
+    line-height: 1.45em;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
@@ -171,13 +172,13 @@ button {
     box-sizing: border-box;
 }
 
-button:hover {
+.button:hover, button:hover {
     background-color: #982c61;
     color: #f9f9f9;
     outline: 0;
 }
 
-button:focus-visible {
+.button:focus-visible, button:focus-visible {
     outline-style: solid;
     outline-width: 2px;
 }
@@ -201,6 +202,6 @@ input:focus {
 
 label {
     display: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     font-weight: 600;
 }

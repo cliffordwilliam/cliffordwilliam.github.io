@@ -1,0 +1,84 @@
+.post-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7em;
+    margin-bottom: 7.8em;
+}
+
+.post-card {
+    transition: transform .5s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-1em);
+}
+  
+.post-card img {
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 0;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+}
+
+.post-card p {
+    margin-bottom: 0;
+}
+
+.post-card > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 50%;
+    box-sizing: border-box;
+}
+
+.post-card > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 2.77em;
+    flex-wrap: wrap;
+    gap: .55em;
+}
+
+.post-card > div > div > div {
+    line-height: 1.45em;
+    margin-right: 1.1em;
+}
+
+.post-card span {
+    color: #aaa;
+}
+
+.post-card h3 {
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+}
+
+.post-card h3 a {
+    color: #323232;
+    font-size: 7.4vmin;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.post-card hr {
+    border: 1px solid #323232;
+    margin: 20px 0;
+}
+
+.post-card ul {
+    display: flex;
+    gap: .55em;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.post-card li {
+    margin: 0;
+}

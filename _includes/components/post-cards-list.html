@@ -1,15 +1,33 @@
 {%- if site.posts.size > 0 -%}
-<ul>
-    {%- for post in site.posts limit:5 -%}
-    <li>
-        <span>{{ post.date | date: site.date_format }}</span>
-        <h3>
-            <a href="{{ post.url }}">
-                {{ post.title | escape }}
-            </a>
-        </h3>
-        {{ post.excerpt }}
-    </li>
+<div {% if use_grid==1 %}class="grid-container"{% endif %}>
+    {%- for post in site.posts offset: post_offset limit: post_limit -%}
+    <div class="post-card">
+        <img width="500" height="500" src="{{ post.thumbnail }}" alt="{{ post.thumbnail }}">
+        <div>
+            <span>{{ post.date | date: site.date_format }}</span>
+            <h3>
+                <a href="{{ post.url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h3>
+            <hr>
+            <div>
+                <div>
+                    <span>By</span><br>{{ site.title }}
+                </div>
+                <ul>
+                    {% for category in post.categories %}
+                    <li>
+                        <a class="button" href="#">{{ category }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {%- if show_excerpt == 1 -%}
+            {{ post.excerpt }}
+            {%- endif -%}
+        </div>
+    </div>
     {%- endfor -%}
-</ul>
+</div>
 {%- endif -%}
