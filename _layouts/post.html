@@ -4,18 +4,23 @@ layout: default
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header>
+  <header id="post-header">
     <section class="masthead" role="img" aria-label="Image Description">
         <img width="500" height="500" src="{{ page.thumbnail }}" alt="{{ post.thumbnail }}">
     </section>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ post.date | date: site.date_format }}
+    </time>
+    • 
+    <span>{% include components/reading-time.html %}</span>
     <h1 itemprop="name headline">{{ page.title | escape }}</h1>
-    <p>
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {{ post.date | date: site.date_format }}
-        </time>
-        • 
-        <span>{% include components/reading-time.html %}</span>
-    </p>
+    <hr>
+    <div>
+      <p>
+        <span>By</span><br>{% site.title %}
+      </p>
+      <button>{{ page.categories | first }}</button>
+    </div>
   </header>
 
   <div itemprop="articleBody"></div>
