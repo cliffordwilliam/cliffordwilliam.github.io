@@ -3,12 +3,17 @@
     text-align: center;
     height: 60vh;
     position: relative;
+    background-size: cover !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://i.postimg.cc/gkvtpNcq/jean-philippe-delberghe-75x-PHEQBmv-A-unsplash.jpg) center center fixed;
+    box-shadow: inset 0px 0px 105px 105px rgb(255 255 255);
 }
   
 .masthead h1 {
     font-weight: 400;
     font-size: 7.4vmin;
     margin: auto;
+    text-decoration: underline;
+    text-decoration-color: #b4dcb4;
 }
   
 .masthead img {
