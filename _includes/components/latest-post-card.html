@@ -1,0 +1,29 @@
+{%- if site.posts.size > 0 -%}
+<div>
+    {%- for post in site.posts limit:1 -%}
+    <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail }}">
+    <div>
+        <span>{{ post.date | date: site.date_format }}</span>
+        <h3>
+            <a href="{{ post.url }}">
+                {{ post.title | escape }}
+            </a>
+        </h3>
+        <hr>
+        <div>
+            <div>
+                By<br>{{ site.title }}
+            </div>
+            <ul>
+                {% for category in post.categories %}
+                <li>
+                    <a href="#">{{category}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <p>{{ post.excerpt }}</p>
+    </div>
+    {%- endfor -%}
+</div>
+{%- endif -%}

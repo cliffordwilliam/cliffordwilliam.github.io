@@ -1,0 +1,15 @@
+{%- if site.posts.size > 0 -%}
+<ul>
+    {%- for post in site.posts limit:5 -%}
+    <li>
+        <span>{{ post.date | date: site.date_format }}</span>
+        <h3>
+            <a href="{{ post.url }}">
+                {{ post.title | escape }}
+            </a>
+        </h3>
+        {{ post.excerpt }}
+    </li>
+    {%- endfor -%}
+</ul>
+{%- endif -%}
