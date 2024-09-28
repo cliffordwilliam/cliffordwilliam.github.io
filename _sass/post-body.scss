@@ -1,0 +1,26 @@
+div[itemprop="articleBody"] {
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 9em;
+}
+
+@media (max-width: 992px) {
+    div[itemprop="articleBody"] {
+        display: block;
+        flex-flow: row-reverse;
+        gap: 9em;
+    }
+    div[itemprop="articleBody"] > div:first-child {
+        position: static;
+    }
+}
+
+div[itemprop="articleBody"] > div:first-child {
+    position: sticky;
+    top: 0;
+    align-self: start;
+}
+
+div[itemprop="articleBody"] > div:last-child {
+    flex: 1;
+}
