@@ -1,5 +1,5 @@
 {%- if site.posts.size > 0 -%}
-<div>
+<div id="latest-post-container">
     {%- for post in site.posts limit:1 -%}
     <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail }}">
     <div>
@@ -12,7 +12,7 @@
         <hr>
         <div>
             <div>
-                By<br>{{ site.title }}
+                <span>By</span><br>{{ site.title }}
             </div>
             <ul>
                 {% for category in post.categories %}

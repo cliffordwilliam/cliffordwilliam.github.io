@@ -1,6 +1,9 @@
 ---
 title: "Test Post Again"
 thumbnail: "https://picsum.photos/800/450"
+categories: 
+  - "Personal"
+  - "Technology"
 ---
 
 This is the introduction section of the test post.
