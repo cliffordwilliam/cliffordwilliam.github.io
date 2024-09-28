@@ -4,6 +4,16 @@ div[itemprop="articleBody"] {
     gap: 9em;
 }
 
+div[itemprop="articleBody"] > div:first-child {
+    position: sticky;
+    top: 0;
+    align-self: start;
+}
+
+div[itemprop="articleBody"] > div:last-child {
+    flex: 1;
+}
+
 @media (max-width: 992px) {
     div[itemprop="articleBody"] {
         display: block;
@@ -13,14 +23,4 @@ div[itemprop="articleBody"] {
     div[itemprop="articleBody"] > div:first-child {
         position: static;
     }
-}
-
-div[itemprop="articleBody"] > div:first-child {
-    position: sticky;
-    top: 0;
-    align-self: start;
-}
-
-div[itemprop="articleBody"] > div:last-child {
-    flex: 1;
 }
