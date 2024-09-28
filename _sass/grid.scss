@@ -6,6 +6,8 @@
 
 .grid-container img {
     width: 100%;
+    display: block;
+    flex-basis: 100%;
 }
 
 @media (max-width: 992px) {
