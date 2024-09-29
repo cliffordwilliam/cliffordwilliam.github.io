@@ -1,91 +1,93 @@
 #site-footer {
     display: flex;
     gap: 4em;
-    border-top: 1px solid #d2d2d2;
-    padding: 220px 0;
+    border-top: 1px solid $white-3;
+    padding: 16.3em 0;
     flex-wrap: wrap;
-}
 
-#site-footer .logo {
-    margin-bottom: .8em;
-}
-
-#site-footer h2 {
-    margin-top: 0;
-    font-size: .9em;
-    font-weight: 700;
-}
-
-#site-footer form h2 {
-    font-size: 1.5em;
-    font-weight: 400;
-}
-
-#site-footer div p {
-    margin-bottom: 0;
-    margin-top: .5em;
-    font-size: .8em;
-}
-
-#site-footer a {
-    display: inline-block;
-    color: #464646;
-    font-size: .9em;
-    border-bottom: 1px dotted #aaa;
-}
-
-#site-footer a[aria-current="page"] {
-    pointer-events: none;
-    cursor: default;
-    color: #464646;
-    font-size: .9em;
-    font-weight: normal;
-    border-bottom: 1px dashed #323232;
-}
-
-#site-footer a:hover {
-    color: #464646;
-    font-size: .9em;
-    font-weight: normal;
-    border-bottom: 1px dashed #323232;
-}
-
-#site-footer div {
-    flex: 2;
-}
-
-#site-footer nav {
-    flex: 1;
-}
-
-#site-footer form {
-    flex: 2;
-    flex-basis: content;
-    max-width: 20em;
-}
-
-@media (max-width: 992px) {
-    #site-footer div {
-        flex-basis: 100%;
+    .logo {
+        margin-bottom: 0.8em;
     }
 
+    h2 {
+        margin-top: 0;
+
+        &:first-of-type {
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        &:not(:first-of-type) {
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+    }
+
+    div {
+        flex: 2;
+
+        p {
+            margin: 0;
+            margin-top: 0.5em;
+            font-size: 0.8em;
+        }
+    }
+
+    nav {
+        flex: 1;
+    }
+
+    form {
+        flex: 2;
+        flex-basis: content;
+        max-width: 20em;
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+    }
+
+    a {
+        display: inline-block;
+        color: $grey-4;
+        font-size: 0.9em;
+        border-bottom: 1px dotted $grey-2;
+
+        &[aria-current="page"] {
+            pointer-events: none;
+            cursor: default;
+            font-weight: normal;
+            border-bottom: 1px dashed $grey-3;
+        }
+
+        &:hover {
+            color: $grey-4;
+            font-weight: normal;
+            border-bottom: 1px dashed $grey-3;
+        }
+    }
+
+    input {
+        display: block;
+        width: 100%;
+    }
+
+    button {
+        display: block;
+        margin-left: auto;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@include max-media-query() {
+    #site-footer div,
     #site-footer form {
         flex-basis: 100%;
     }
-}
-
-#site-footer input {
-    display: block;
-    width: 100%;
-}
-
-#site-footer button {
-    display: block;
-    margin-left: auto;
-}
-
-#site-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }

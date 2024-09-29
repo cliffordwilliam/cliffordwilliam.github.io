@@ -3,29 +3,29 @@ div[itemprop="articleBody"] {
     flex-flow: row-reverse;
     gap: 5em;
     margin-bottom: 6em;
+
+    // Media query mixin to change layout on smaller screens
+    @include max-media-query() {
+        display: block;
+    }
 }
 
-div[itemprop="articleBody"] > aside:first-child {
+aside#toc-container {
     position: sticky;
     top: 1.2em;
     align-self: start;
+
+    @include max-media-query() {
+        position: static; // Adjust position in smaller screens
+    }
 }
 
-div[itemprop="articleBody"] > div:last-child {
+div#post-body {
     flex: 1;
 }
 
-@media (max-width: 992px) {
-    div[itemprop="articleBody"] {
-        display: block;
-    }
-    div[itemprop="articleBody"] > aside:first-child {
-        position: static;
-    }
-}
-
 .thin-container {
-    max-width: 100ch;
+    max-width: $body-max-width-thin;
     margin-left: auto;
     margin-right: auto;
 }

@@ -2,15 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
+
+    img {
+        width: 100%;
+        display: block;
+        flex-basis: 100%;
+    }
 }
 
-.grid-container img {
-    width: 100%;
-    display: block;
-    flex-basis: 100%;
-}
-
-@media (max-width: 992px) {
+@include max-media-query() {
     .grid-container {
         grid-template-columns: 1fr;
     }

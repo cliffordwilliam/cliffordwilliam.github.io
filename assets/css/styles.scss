@@ -3,6 +3,31 @@
 
 @charset "utf-8";
 
+// Hero image
+$hero-image-url: "https://i.postimg.cc/gkvtpNcq/jean-philippe-delberghe-75x-PHEQBmv-A-unsplash.jpg" !default;
+$hero-image-blur-radius: 105px !default;
+$hero-image-spread-radius: 105px !default;
+
+// Colors
+$link-green: #1d7484 !default;
+$link-red: #982c61 !default;
+$black: #000 !default;
+$white: #fff !default;
+$white-1: #f1f1f1 !default;
+$white-2: #f9f9f9 !default;
+$white-3: #d2d2d2 !default;
+$white-4: #ebebeb !default;
+$white-5: #f3f4f6 !default;
+$white-alpha: #ffffff80 !default;
+$grey-1: #4a4a4a !default;
+$grey-2: #aaa !default;
+$grey-3: #323232 !default;
+$grey-4: #464646 !default;
+$grey-5: #6b7280 !default;
+$grey-6: #1f2937 !default;
+$green-tint: #b4dcb4 !default;
+$red-tint: #ffb9b9 !default;
+
 // Base font styles
 $html-font-family: 
   "Segoe UI", 
@@ -15,25 +40,28 @@ $html-font-family:
   -apple-system, 
   BlinkMacSystemFont, 
   sans-serif !default;
-$html-font-size:   62.5% !default;
+$html-font-size: 62.5% !default;
 
 // Body styles
 $body-line-height: 1.618 !default;
 $body-mobile-font-size: 1.35rem !default;
 $body-bigger-font-size: 1.8rem !default;
 $body-max-width: 144rem !default;
+$body-max-width-thin: 100ch !default;
 $body-padding-vertical: 1.3rem !default;
 $body-padding-horizontal: 3rem !default;
 
-// Colors
-$grey-1:       #4a4a4a !default;
-
 // Breakpoints
-$breakpoint:          992px !default;
+$breakpoint: 992px !default;
 
 // Media query mixin
 @mixin min-media-query() {
   @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin max-media-query() {
+  @media screen and (max-width: $breakpoint) {
     @content;
   }
 }

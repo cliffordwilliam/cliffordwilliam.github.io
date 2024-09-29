@@ -1,32 +1,32 @@
 #toc-container {
     min-width: 12.45em;
-}
 
-#toc-container h2 {
-    font-size: 1em;
-}
+    h2 {
+        font-size: 1em;
+    }
 
-#toc-container ul {
-    padding-left: 0;
-    list-style: none;
-}
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
 
-#toc-container li {
-    border-left: 1px solid #d2d2d2;
-    padding: .2em .8em;
-    margin-bottom: 0;
-}
+    li {
+        border-left: 1px solid $white-3;
+        padding: 0.2em 0.8em;
+        margin-bottom: 0;
 
-#toc-container a {
-    font-size: .8em;
-    color: #6b7280;
-}
+        &.active {
+            background-color: $white-5;
+            border-left-color: $grey-3;
 
-#toc-container li.active {
-    background-color: #f3f4f6;
-    border-left-color: #323232;
-}
+            a {
+                color: $grey-6;
+            }
+        }
+    }
 
-#toc-container li.active a {
-    color: #1f2937;
+    a {
+        font-size: 0.8em;
+        color: $grey-5;
+    }
 }

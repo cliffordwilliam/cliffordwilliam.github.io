@@ -1,39 +1,40 @@
-#post-header .thin-container time {
-    color: #aaa;
-    margin-bottom: 2.8em;
-}
+#post-header {
+    .thin-container {
+        margin-bottom: 7em;
 
-#post-header .thin-container {
-    margin-bottom: 7em;
-}
+        time {
+            color: $grey-2;
+            margin-bottom: 2.8em;
+        }
 
-#post-header .thin-container span {
-    color: #aaa;
-}
+        span {
+            color: $grey-2;
+        }
 
-#post-header .thin-container h1 {
-    font-size: 3.34em;
-    font-weight: 400;
-    line-height: 1.3em;
-}
+        h1 {
+            font-size: 3.34em;
+            font-weight: 400;
+            line-height: 1.3em;
+        }
 
-#post-header .thin-container hr {
-    height: 0;
-    border: none;
-    border-top: 1px solid #d2d2d2;
-    margin-top: 3.34em;
-    margin-bottom: 1.1em;
-}
+        hr {
+            height: 0;
+            border: none;
+            border-top: 1px solid $white-3;
+            margin-top: 3.34em;
+            margin-bottom: 1.1em;
+        }
 
-#post-header .thin-container p {
-    margin: 0;
-}
+        p {
+            margin: 0;
+        }
 
-#post-header .thin-container div {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: .55em;
-    align-items: center;
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.55em;
+        }
+    }
 }
