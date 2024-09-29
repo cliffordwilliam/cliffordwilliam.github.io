@@ -20,3 +20,5 @@ plugins:
   - jekyll-feed
 sass:
   style: compressed
+exclude:
+  - todo.md
