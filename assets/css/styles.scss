@@ -3,9 +3,21 @@
 
 @charset "utf-8";
 
-$html-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !default;
+// Base font styles
+$html-font-family: 
+  "Segoe UI", 
+  "Roboto", 
+  "Helvetica Neue", 
+  "Arial", 
+  "Noto Sans", 
+  "Verdana", 
+  "Trebuchet MS", 
+  -apple-system, 
+  BlinkMacSystemFont, 
+  sans-serif !default;
 $html-font-size:   62.5% !default;
 
+// Body styles
 $body-line-height: 1.618 !default;
 $body-mobile-font-size: 1.35rem !default;
 $body-bigger-font-size: 1.8rem !default;
@@ -13,10 +25,13 @@ $body-max-width: 144rem !default;
 $body-padding-vertical: 1.3rem !default;
 $body-padding-horizontal: 3rem !default;
 
+// Colors
 $grey-1:       #4a4a4a !default;
 
+// Breakpoints
 $breakpoint:          992px !default;
 
+// Media query mixin
 @mixin min-media-query() {
   @media screen and (min-width: $breakpoint) {
     @content;
