@@ -19,7 +19,6 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-avatar
-  - "jekyll-github-metadata"
 sass:
   style: compressed
 exclude:
