@@ -97,9 +97,11 @@
     font-size: 1.2em;
 }
 
-
-@media(prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
     .post-card {
         transition: none;
+        &:hover {
+            transform: translateY(0);
+        }
     }
 }
