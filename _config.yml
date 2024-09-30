@@ -18,6 +18,7 @@ defaults:
       layout: "post"
 plugins:
   - jekyll-feed
+  - jekyll-avatar
 sass:
   style: compressed
 exclude:
