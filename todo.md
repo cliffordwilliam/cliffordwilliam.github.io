@@ -8,3 +8,6 @@
 - [x] Put animation transitions for those who prefers it only.
 - [ ] Exclude some dir from sitemap.
 - [ ] Review SEO again add twitter and facebook card.
+- [ ] Add next and prev post button in post for seo.
+- [ ] Add search input in navbar, if got value, have overlay to show search post hits.
+- [ ] Add contact form in contact me page, also update the 404 to link there instead.
