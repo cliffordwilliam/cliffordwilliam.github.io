@@ -1,6 +1,7 @@
 ---
 title: "Test Post Again"
 thumbnail: "https://i.postimg.cc/26qvHZW1/luca-bravo-XJXWbf-So2f0-unsplash.jpg"
+description: "A reflective piece exploring my personal experiences and insights. Join me as I share stories from my journey, lessons learned, and the moments that have shaped who I am today."
 categories: 
   - "Personal"
 ---

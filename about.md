@@ -1,5 +1,6 @@
 ---
 title: "About Me"
+description: "Learn more about me, Clifford William, a passionate full-stack developer with a love for creativity and innovation. This page details my journey, skills, and the projects that inspire me. Discover how I blend technology and artistry to create impactful web solutions."
 ---
 
 {% avatar {{ site.github.owner_name }} size=200 %}

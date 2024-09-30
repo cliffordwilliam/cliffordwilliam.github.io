@@ -1,6 +1,12 @@
 theme: null
 title: Clifford William
-description: Bookmark this to keep an eye on my project updates!
+tagline: Exploring the intersection of creativity and code.
+author: Clifford William
+email: ccliffordwilliam@gmail.com
+description: >
+  Welcome to my portfolio! I'm Clifford William, 
+  a passionate full-stack developer crafting innovative web solutions. 
+  Here, I share my projects and insights at the intersection of creativity and technology.
 domain: cliffordwilliam.com
 url: https://cliffordwilliam.com
 date_format: "%b %-d, %Y"
@@ -19,6 +25,7 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-avatar
+  - jekyll-seo-tag
 sass:
   style: compressed
 exclude:
