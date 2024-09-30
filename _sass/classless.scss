@@ -82,6 +82,12 @@ a {
     }
 }
 
+@media(prefers-reduced-motion) {
+    a {
+        transition: none;
+    }
+}
+
 
 ul {
     padding-left: 1.4em;

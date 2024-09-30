@@ -1,0 +1,15 @@
+hr.hidden {
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+@media(prefers-reduced-motion) {
+    hr.hidden {
+        transition: none;
+        width: 100%;
+    }
+}
+
+hr.show {
+    width: 100%;
+}

@@ -103,4 +103,9 @@ a[aria-current="page"] {
     color: $grey-3;
     font-weight: 700;
 }
-  
+
+@media(prefers-reduced-motion) {
+    nav {
+        transition: none;
+    }
+}
