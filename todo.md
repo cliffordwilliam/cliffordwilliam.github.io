@@ -12,3 +12,4 @@
 - [ ] Add search input in navbar, if got value, have overlay to show search post hits.
 - [ ] Add contact form in contact me page, also update the 404 to link there instead.
 - [ ] Fix and review with page speed insight, html checks and css checks.
+- [ ] Add site icon and tab icon for seo.
