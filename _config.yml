@@ -22,38 +22,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: "assets/**/*"
-    values:
-      sitemap: false
-  - scope:
-      path: "_sass/**/*"
-    values:
-      sitemap: false
-  - scope:
-      path: "_data/**/*"
-    values:
-      sitemap: false
-  - scope:
-      path: "todo.md"
-    values:
-      sitemap: false
-  - scope:
-      path: "README.md"
-    values:
-      sitemap: false
-  - scope:
-      path: "CNAME"
-    values:
-      sitemap: false
-  - scope:
-      path: "_config.yml"
-    values:
-      sitemap: false
-  - scope:
-      path: "_drafts/"
-    values:
-      sitemap: false
 plugins:
   - jekyll-feed
   - jekyll-avatar
