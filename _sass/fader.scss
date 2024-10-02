@@ -38,3 +38,15 @@
         opacity: 1;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    #fader {
+        animation: none;
+        display: none;
+    }
+
+    &.fade-out, &.fade-in {
+        transition: none;
+        animation: none;
+    }
+}
