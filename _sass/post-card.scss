@@ -3,11 +3,6 @@
     flex-wrap: wrap;
     gap: 1.7em;
     margin-bottom: 7.8em;
-    transition: transform 0.5s ease;
-
-    &:hover {
-        transform: translateY(-1em);
-    }
 
     img {
         border: 1px solid $white-4;
@@ -95,13 +90,4 @@
 
 .post-card h3 a.small-card-text {
     font-size: 1.2em;
-}
-
-@media (prefers-reduced-motion) {
-    .post-card {
-        transition: none;
-        &:hover {
-            transform: translateY(0);
-        }
-    }
 }
