@@ -5,6 +5,8 @@ function fadeInPage() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
     if (!window.AnimationEvent) return;
     fadeInPage();
     const anchors = document.getElementsByTagName('a');
