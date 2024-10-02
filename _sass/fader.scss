@@ -43,10 +43,15 @@
     #fader {
         animation: none;
         display: none;
-    }
 
-    &.fade-out, &.fade-in {
+    &.fade-out {
         transition: none;
         animation: none;
     }
+
+    &.fade-in {
+        transition: none;
+        animation: none;
+    }
+}
 }
