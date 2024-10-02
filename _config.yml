@@ -10,6 +10,10 @@ description: >
 domain: cliffordwilliam.com
 url: https://cliffordwilliam.com
 logo: /assets/logo.png
+social:
+  links:
+    - https://www.linkedin.com/in/clifford-william-05bb4220b/
+    - https://github.com/cliffordwilliam
 date_format: "%b %-d, %Y"
 excerpt_separator: "<!--more-->"
 defaults:
