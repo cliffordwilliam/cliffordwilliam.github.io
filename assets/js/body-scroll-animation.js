@@ -6,6 +6,7 @@ const bodyObserver = new IntersectionObserver((entries) => {
     })
 });
 
-const body = document.querySelector("body");
-body.classList.add("hidden");
-bodyObserver.observe(body);
+const pageH1 = document.querySelector("#h1");
+if (!pageH1) return;
+pageH1.classList.add("hidden");
+bodyObserver.observe(pageH1);
