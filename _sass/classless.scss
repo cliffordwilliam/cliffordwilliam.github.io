@@ -72,19 +72,10 @@ hr {
 }
 
 a {
-    text-decoration: none;
     color: $link-green;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
 
     &:hover {
         color: $link-red;
-        border-bottom: 2px solid $grey-1;
-    }
-}
-
-@media(prefers-reduced-motion) {
-    a {
-        transition: none;
     }
 }
 
