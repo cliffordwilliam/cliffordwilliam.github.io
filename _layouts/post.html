@@ -5,9 +5,9 @@ layout: default
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
   <header id="post-header">
-    <section class="masthead">
+    <div class="masthead">
         <img width="400" height="400" src="{{ page.image }}" alt="{{ post.image }}">
-    </section>
+    </div>
     <div class="thin-container">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: site.date_format }}
