@@ -13,6 +13,7 @@
     }
 
     .card-image {
+        border-radius: 10px;
         position: absolute;
         top: 0;
         right: 0;
@@ -26,7 +27,7 @@
         margin-bottom: 0;
     }
 
-    > div {
+    .card-body {
         flex: 1;
         display: flex;
         flex-direction: column;

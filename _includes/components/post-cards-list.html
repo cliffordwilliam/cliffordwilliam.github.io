@@ -17,7 +17,7 @@
         <div class="image-container">
             <img class="card-image" width="500" height="500" src="{{ post.image }}" alt="{{ post.image }}">
         </div>
-        <div>
+        <div class="card-body">
             <span>{{ post.date | date: site.date_format }}</span>
             <h3>
                 <a href="{{ post.url }}" class="{% if use_grid == 1 %}small-card-text{% endif %}">
