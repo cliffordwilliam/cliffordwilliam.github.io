@@ -3,10 +3,6 @@ title: "Contact Me"
 description: "Get in touch with Clifford William for any inquiries, feedback, or project collaborations."
 ---
 
-Here’s a short, friendly paragraph you can place before the form to encourage visitors to get in touch:
-
----
-
 If you have any questions, feedback, or want to discuss potential collaborations, feel free to reach out! I'm always happy to connect and explore new opportunities. Simply fill out the form below, and I’ll get back to you as soon as possible.
 
 <form action="https://formkeep.com/f/6775d8a9aaf6"
