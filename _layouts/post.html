@@ -20,7 +20,14 @@ layout: default
         <p>
           <span>By</span><br>{{ site.title }}
         </p>
-        <button>{{ page.categories | first }}</button>
+        {% assign category_slug = page.categories | first | downcase %}
+        {% if category_slug == 'personal' %}
+            <a class="button red" href="{{ category_slug }}.html">{{ category }}</a>
+        {% elsif category_slug == 'technology' %}
+            <a class="button green" href="{{ category_slug }}.html">{{ category }}</a>
+        {% else %}
+            <a class="button" href="{{ category_slug }}.html">{{ category }}</a>
+        {% endif %}
       </div>
     </div>
   </header>
