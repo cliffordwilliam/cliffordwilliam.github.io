@@ -1,6 +1,7 @@
 #h1 {
     width: 100%;
     max-width: 10em;
+    text-shadow: 1px 2px 4px white;
     text-align: left;
     filter: blur(5px);
     transform: translateY(70%);
@@ -10,6 +11,7 @@
 #h1.show {
     width: 100%;
     max-width: 10em;
+    text-shadow: 1px 2px 4px white;
     text-align: left;
     filter: blur(0);
     transform: translateY(0);
@@ -19,6 +21,7 @@
     #h1 {
         width: 100%;
         max-width: 10em;
+        text-shadow: 1px 2px 4px white;
         text-align: left;
         transition: none;
         filter: none;
@@ -28,6 +31,7 @@
     #h1.show {
         width: 100%;
         max-width: 10em;
+        text-shadow: 1px 2px 4px white;
         text-align: left;
         filter: none;
         transform: none;
