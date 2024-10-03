@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Fullstack"
 description: "I’m Clifford William, a Full Stack Developer based in Indonesia. Welcome to my personal website, where technology meets creativity. Discover my latest projects, explore insightful blog posts on technology and personal experiences, and learn more about my journey as a full-stack developer. Dive in and connect with my world!"
 ---
 
