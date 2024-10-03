@@ -103,7 +103,7 @@
     /* Adjusted to match the path length */
     stroke-dashoffset: 400;
     /* Initial state (not drawn) */
-    transition: stroke-dashoffset 1s;
+    transition: stroke-dashoffset 3s;
     /* Smooth transition when resetting */
 }
 
