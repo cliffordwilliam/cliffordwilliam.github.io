@@ -15,7 +15,7 @@
     {%- for post in posts_to_display offset: post_offset limit: post_limit -%}
     <div class="post-card">
         <div class="image-container">
-            <img class="card-image" width="50" height="50" src="{{ post.image }}" alt="{{ post.image }}">
+            <img class="card-image" width="50" height="50" src="{{ post.image }}" alt="{{ post.image }}" loading="lazy">
         </div>
         <div class="card-body">
             <span>{{ post.date | date: site.date_format }}</span>
