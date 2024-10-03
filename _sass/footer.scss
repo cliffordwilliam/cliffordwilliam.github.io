@@ -103,12 +103,12 @@
     /* Adjusted to match the path length */
     stroke-dashoffset: 400;
     /* Initial state (not drawn) */
-    transition: stroke-dashoffset 3s;
+    transition: stroke-dashoffset 0.5s;
     /* Smooth transition when resetting */
 }
 
 #arrow.show {
-    animation: dash 5s linear forwards;
+    animation: dash 20s linear forwards;
     /* Animate forward */
 }
 
