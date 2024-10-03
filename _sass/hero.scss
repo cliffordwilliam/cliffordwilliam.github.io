@@ -3,7 +3,7 @@
     text-align: center;
     height: 60vh;
     background: linear-gradient($white-alpha, $white-alpha), url($hero-image-url) center center no-repeat;
-    background-size: 400px 400px;
+    background-size: contain;
 
     h1 {
         font-weight: 400;
