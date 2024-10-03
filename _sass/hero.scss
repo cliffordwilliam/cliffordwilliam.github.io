@@ -2,7 +2,7 @@
     display: flex;
     text-align: center;
     height: 60vh;
-    background: linear-gradient($white-alpha, $white-alpha), url($hero-image-url) center center no-repeat;
+    background: linear-gradient($white-alpha, $white-alpha), url($hero-image-url) 60% center no-repeat;
     background-size: contain;
 
     h1 {
