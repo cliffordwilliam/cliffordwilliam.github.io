@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="masthead">
-    <h1 id="h1">
+    <h1 id="h1" {% if page.title == "Fullstack" %}class="home-h1"{% endif %}>
         {{ page.title | escape }}
     </h1>
 </section>
