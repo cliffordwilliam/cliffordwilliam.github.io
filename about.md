@@ -3,6 +3,8 @@ title: "About Me"
 description: "Learn more about me, Clifford William, a passionate full-stack developer with a love for creativity and innovation. This page details my journey, skills, and the projects that inspire me. Discover how I blend technology and artistry to create impactful web solutions."
 ---
 
+## Introduction
+
 Hi, I’m **Clifford William**, a **Full Stack Developer** based in **Indonesia**. I enjoy building software solutions and collecting knowledge from various aspects of life. My expertise spans both frontend and backend technologies, and I am always eager to learn new things.
 
 ## What I Do
