@@ -5,6 +5,7 @@
     border-top: 1px solid $white-3;
     padding: 16.3em 0;
     flex-wrap: wrap;
+    position: relative;
 
     .logo {
         margin-bottom: 0.8em;
@@ -87,8 +88,43 @@
 }
 
 @include max-media-query() {
+
     #site-footer div,
     #site-footer form {
         flex-basis: 100%;
+    }
+}
+
+#arrow {
+    position: absolute;
+    top: -40%;
+    right: 40%;
+    stroke-dasharray: 400;
+    /* Adjusted to match the path length */
+    stroke-dashoffset: 400;
+    /* Initial state (not drawn) */
+    transition: stroke-dashoffset 0.5s;
+    /* Smooth transition when resetting */
+}
+
+#arrow.show {
+    animation: dash 5s linear forwards;
+    /* Animate forward */
+}
+
+#arrow.reset {
+    stroke-dashoffset: 400;
+    /* Reset to start (not drawn) */
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 400;
+        /* Starting from the full length of the path */
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        /* Animates to the end of the path */
     }
 }
