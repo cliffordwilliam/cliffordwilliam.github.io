@@ -1,23 +1,35 @@
 #h1 {
-    transform: translate(-100%, 70%);
+    width: 100%;
+    max-width: 10em;
+    text-align: left;
     filter: blur(5px);
+    transform: translateY(70%);
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 #h1.show {
-    transform: translate(-100%, 0);
+    width: 100%;
+    max-width: 10em;
+    text-align: left;
     filter: blur(0);
+    transform: translateY(0);
 }
 
-@media (prefers-reduced-motion) {
+@media(prefers-reduced-motion) {
     #h1 {
-        transform: translate(-100%, 0);
+        width: 100%;
+        max-width: 10em;
+        text-align: left;
         transition: none;
         filter: none;
+        transform: none;
     }
 
     #h1.show {
-        transform: translate(-100%, 0);
+        width: 100%;
+        max-width: 10em;
+        text-align: left;
         filter: none;
+        transform: none;
     }
 }
