@@ -1,71 +1,91 @@
-<script src="/assets/js/lunr.js"></script>
+<div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+        <input type="text" id="search-box" name="query">
+        <input type="submit" value="search">
+    </form>
+</div>
+<!-- List where search results will be rendered -->
+<ul id="search-results"></ul>
 
 <script>
-{% assign counter = 0 %}
-var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }, {% endfor %}{% for page in site.posts %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
-
-var idx = lunr(function () {
-    this.ref('id')
-    this.field('title')
-    this.field('body')
-
-    documents.forEach(function (doc) {
-        this.add(doc)
-    }, this)
-});
-function lunr_search(term) {
-    document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
-    if(term) {
-        document.getElementById('lunrsearchresults').innerHTML = "<p>Search results for '" + term + "'</p>" + document.getElementById('lunrsearchresults').innerHTML;
-        //put results on the screen.
-        var results = idx.search(term);
-        if(results.length>0){
-            //console.log(idx.search(term));
-            //if results
-            for (var i = 0; i < results.length; i++) {
-                // more statements
-                var ref = results[i]['ref'];
-                var url = documents[ref]['url'];
-                var title = documents[ref]['title'];
-                var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></a></li>";
-            }
-        } else {
-            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";
-        }
+    // Template to generate the JSON to search
+    window.store = {
+    {% for post in site.posts %}
+    "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+            "author": "{{ post.author | xml_escape }}",
+                "category": "{{ post.category | xml_escape }}",
+                    "content": { { post.content | strip_html | strip_newlines | jsonify } },
+        "url": "{{ post.url | xml_escape }}"
     }
-    return false;
-}
+    {% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  };
 </script>
-<style>
-    #lunrsearchresults {padding-top: 0.2rem;}
-    .lunrsearchresult {padding-bottom: 1rem;}
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
-</style>
 
+<!-- Import lunr.js from unpkg.com -->
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<!-- Custom search script which we will create below -->
+<script>
+    (function() {
+  function showResults(results, store) {
+    var searchResults = document.getElementById('search-results');
 
-<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-    <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" /></p>
-</form>
-<div id="lunrsearchresults">
-    <ul></ul>
-</div>
+    if (results.length) { // If there are results...
+      var appendString = '';
+
+      for (var i = 0; i < results.length; i++) {  // Iterate over them and generate html
+        var item = store[results[i].ref];
+        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
+        appendString += '<p>' + item.content.substring(0, 250) + '...</p></li>';
+      }
+
+      searchResults.innerHTML = appendString;
+    } else {
+      searchResults.innerHTML = '<li>No results found</li>';
+    }
+  }
+
+  function getQuery(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+
+      if (pair[0] === variable) {
+        return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+      }
+    }
+  }
+
+  var searchTerm = getQuery('query');
+
+  if (searchTerm) {
+    document.getElementById('search-box').setAttribute("value", searchTerm);
+
+    // Initalize lunr.js with the fields to search.
+    // The title field is given more weight with the "boost" parameter
+    var idx = lunr(function () {
+      this.field('id');
+      this.field('title', { boost: 10 });
+      this.field('author');
+      this.field('category');
+      this.field('content');
+
+      for (var key in window.store) { // Add the JSON we generated from the site content to Lunr.js.
+        this.add({
+          'id': key,
+          'title': window.store[key].title,
+          'author': window.store[key].author,
+          'category': window.store[key].category,
+          'content': window.store[key].content
+        });
+      }
+    });
+
+    var results = idx.search(searchTerm); // Perform search with Lunr.js
+    showResults(results, window.store);
+  }
+})();
+</script>
