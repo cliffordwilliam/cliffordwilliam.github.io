@@ -16,4 +16,4 @@ let documents = {{ site.posts | jsonify }}
 <!-- Import lunr.js from unpkg.com -->
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 
-<script src="/assets/js/search.js"></script>
+{% include components/search-lunr.html %}
