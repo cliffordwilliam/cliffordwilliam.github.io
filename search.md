@@ -7,6 +7,4 @@ description: "Find posts here."
 
 Search here.
 
-<div>
 {% include components/search-lunr.html %}
-</div>
