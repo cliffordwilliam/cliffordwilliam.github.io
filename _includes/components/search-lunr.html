@@ -1,6 +1,6 @@
 <div>
     <form id="search-form">
-        <input type="text" id="search-input">
+        <input type="text" id="search-input" placeholder="Search...">
     </form>
     <script src="https://unpkg.com/lunr/lunr.js"></script>
     <script>
@@ -15,20 +15,27 @@
             }{% if forloop.last == false %},{% endif %}
             {% endfor %}
         };
+
         let documents = Object.values(postsObject);
+        
         let idx = lunr(function () {
             this.ref('url');
             this.field('title');
-            this.field('description');
-            this.field('categories');
+            this.field('content');
+            this.field('category');
 
             documents.forEach((doc) => {
                 this.add(doc);
             });
         });
+
         const input = document.querySelector("#search-input");
-        input.addEventListener("keydown", (event) => {
-            console.log(input.value);
+        input.addEventListener("input", () => {
+            const searchValue = input.value;
+            if (searchValue) {
+                const result = idx.search(searchValue);
+                console.log(result);
+            }
         });
     </script>
 </div>
