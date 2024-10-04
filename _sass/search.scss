@@ -16,16 +16,11 @@
 }
 #search-results a {
     font-size: 1.2em;
-    color: $grey-3;
-    font-weight: 500;
-    text-decoration: none;
+    @include a-style;
 }
 #search-results p {
     margin-bottom: 0;
 }
 #search-results hr {
-    margin: 1.5em 0;
-    height: 0;
-    border: none;
-    border-top: 1px solid $white-3;
+    @include hr-style;
 }
