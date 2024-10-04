@@ -25,7 +25,8 @@ let idx = lunr(function () {
 const input = document.querySelector("#search-input");
 input.addEventListener("keydown", (event) => {
     const searchValue = event.target.value; // Get the current value from the input
-    idx.search(searchValue); // Run the search with the input value
+    result = idx.search(searchValue); // Run the search with the input value
+    console.log(result);
 });
 </script>
 
