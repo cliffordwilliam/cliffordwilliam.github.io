@@ -7,18 +7,18 @@
     <script>
         let postsObject = {
             {% for post in site.posts %}
-            "{{ post.url | slugify }}": {
-                "title": "{{ post.title | xml_escape }}",
+        "{{ post.url | slugify }}": {
+            "title": "{{ post.title | xml_escape }}",
                 "author": "{{ post.author | xml_escape }}",
-                "category": "{{ post.category | xml_escape }}",
-                "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-                "url": "{{ post.url | xml_escape }}"
-            }{% if forloop.last == false %},{% endif %}
-            {% endfor %}
+                    "category": "{{ post.category | xml_escape }}",
+                        "content": { { post.content | strip_html | strip_newlines | jsonify } },
+            "url": "{{ post.url | xml_escape }}"
+        } {% if forloop.last == false %}, {% endif %}
+        {% endfor %}
         };
 
         let documents = Object.values(postsObject);
-        
+
         let idx = lunr(function () {
             this.ref('url');
             this.field('title', { boost: 10 });
@@ -47,7 +47,7 @@
                         link.textContent = doc.title;
                         titleElement.appendChild(link);
                         listItem.appendChild(titleElement);
-                    })
+                    });
                     resultsList.appendChild(listItem);
                 } else {
                     const listItem = document.createElement("li");
