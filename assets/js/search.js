@@ -1,6 +1,3 @@
----
----
-
 let documents = {{ site.posts | jsonify }}
 let idx = lunr(function () {
     this.ref('name')
