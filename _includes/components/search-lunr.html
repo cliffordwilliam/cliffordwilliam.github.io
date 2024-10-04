@@ -14,16 +14,6 @@
         "name": "Lodash",
         "text": "A modern JavaScript utility library delivering modularity, performance & extras."
         }]
-        // let documents = [
-        //     {% for post in site.posts %}
-        //     {
-        //         "name": "{{ post.title }}",
-        //         "text": "{{ post.description }}",
-        //         "categories": "{{ post.categories | join: ', ' }}",
-        //         "image": "{{ post.image }}"
-        //     }{% if forloop.last == false %},{% endif %}
-        //     {% endfor %}
-        // ];
         let idx = lunr(function () {
             this.ref('name');
             this.field('text');
