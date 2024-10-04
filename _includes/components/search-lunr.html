@@ -20,15 +20,15 @@
             this.ref('name');
             this.field('text');
 
-            documents.forEach((doc) => { // Use arrow function here
-                this.add(doc); // Now this refers to the lunr instance
+            documents.forEach((doc) => {
+                this.add(doc);
             });
         });
 
         const input = document.querySelector("#search-input");
         input.addEventListener("keydown", (event) => {
-            const searchValue = event.target.value; // Get the current value from the input
-            result = idx.search(searchValue); // Run the search with the input value
+            const searchValue = event.target.value;
+            result = idx.search(searchValue);
             console.log(result);
         });
     </script>
