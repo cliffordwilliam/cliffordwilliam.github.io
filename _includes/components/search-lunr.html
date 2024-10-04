@@ -20,7 +20,7 @@
         
         let idx = lunr(function () {
             this.ref('url');
-            this.field('title');
+            this.field('title', { boost: 10 });
             this.field('content');
             this.field('category');
 
