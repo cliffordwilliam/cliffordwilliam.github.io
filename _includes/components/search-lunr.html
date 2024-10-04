@@ -7,7 +7,7 @@
     <script>
         let postsObject = {
             {% for post in site.posts %}
-            "{{ post.url | slugify }}": {
+            "{{ post.url | xml_escape }}": {
                 "title": "{{ post.title | xml_escape }}",
                 "author": "{{ post.author | xml_escape }}",
                 "category": "{{ post.category | xml_escape }}",
@@ -42,7 +42,7 @@
 
                 if (results.length) {
                     results.forEach(result => {
-                        console.log(result)
+                        console.log(postsObject[result.ref]);
                     });
                 } else {
                     const listItem = document.createElement("li");
