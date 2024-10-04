@@ -3,10 +3,6 @@ title: "Search"
 description: "Find posts here."
 ---
 
-## Introduction
-
-Search any posts here.
-
 <form id="search-form">
     <input type="text" id="search-input">
 </form>
