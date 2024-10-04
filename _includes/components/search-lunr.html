@@ -2,6 +2,7 @@
     <form id="search-form">
         <input type="text" id="search-input" placeholder="Search...">
     </form>
+    <ul id="search-results"></ul>
     <script src="https://unpkg.com/lunr/lunr.js"></script>
     <script>
         let postsObject = {
@@ -30,11 +31,29 @@
         });
 
         const input = document.querySelector("#search-input");
+        const resultsList = document.querySelector("#search-results");
         input.addEventListener("input", () => {
             const searchValue = input.value;
+            resultsList.textContent = "";
             if (searchValue) {
-                const result = idx.search(searchValue);
-                console.log(result);
+                const results = idx.search(searchValue);
+                if (results.length) {
+                    results.forEach(result => {
+                        const doc = postsObject[result.ref];
+                        const listItem = document.createElement("li");
+                        const titleElement = document.createElement("h3");
+                        const link = document.createElement("a");
+                        link.href = doc.url;
+                        link.textContent = doc.title;
+                        titleElement.appendChild(link);
+                        listItem.appendChild(titleElement);
+                    })
+                    resultsList.appendChild(listItem);
+                } else {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = "No results found";
+                    resultsList.appendChild(listItem);
+                }
             }
         });
     </script>
