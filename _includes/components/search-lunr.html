@@ -42,7 +42,15 @@
 
                 if (results.length) {
                     results.forEach(result => {
-                        console.log(postsObject[result.ref]);
+                        post = postsObject[result.ref]
+                        const listItem = document.createElement("li");
+                        const titleElement = document.createElement("h3");
+                        const link = document.createElement("a");
+                        link.href = post.url;
+                        link.textContent = post.title;
+                        titleElement.appendChild(link);
+                        listItem.appendChild(titleElement);
+                        resultsList.appendChild(listItem);
                     });
                 } else {
                     const listItem = document.createElement("li");
