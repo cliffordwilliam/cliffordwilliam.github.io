@@ -35,6 +35,11 @@
         if (searchValue) {
             resultsList.classList.add("open");
             const results = idx.search(searchValue);
+            const resultsCount = results.length;
+            const resultsCountItem = document.createElement("li");
+            resultsCountItem.textContent = `${resultsCount} Result(s) found`;
+            resultsCountItem.style.fontWeight = "bold";
+            resultsList.appendChild(resultsCountItem);
             if (results.length) {
                 results.forEach(result => {
                     const post = postsObject[result.ref];
@@ -52,10 +57,6 @@
                     listItem.appendChild(hrElement);
                     resultsList.appendChild(listItem);
                 });
-            } else {
-                const listItem = document.createElement("li");
-                listItem.textContent = "No results found";
-                resultsList.appendChild(listItem);
             }
         } else {
             resultsList.classList.remove("open");
