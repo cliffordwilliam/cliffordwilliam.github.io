@@ -17,13 +17,14 @@
     </script>
     <script>
         let idx = lunr(function () {
-            this.ref('name')
-            this.field('text')
+            this.ref('name');
+            this.field('text');
 
-            documents.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
+            documents.forEach((doc) => { // Use arrow function here
+                this.add(doc); // Now this refers to the lunr instance
+            });
+        });
+
         const input = document.querySelector("#search-input");
         input.addEventListener("keydown", (event) => {
             const searchValue = event.target.value; // Get the current value from the input
