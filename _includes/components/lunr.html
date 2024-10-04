@@ -5,7 +5,7 @@
         {% for post in site.posts %}
         "{{ post.url | xml_escape }}": {
             "title": "{{ post.title | xml_escape }}",
-            "description": "{{ post.description | xml_escape }}",
+            "excerpt": "{{ post.excerpt | xml_escape }}",
             "author": "{{ post.author | xml_escape }}",
             "category": "{{ post.category | xml_escape }}",
             "content": {{ post.content | strip_html | strip_newlines | jsonify }},
@@ -17,7 +17,7 @@
     let idx = lunr(function () {
         this.ref('url');
         this.field('title', { boost: 10 });
-        this.field('description');
+        this.field('excerpt');
         this.field('author');
         this.field('category');
         this.field('content');
@@ -45,7 +45,7 @@
                     const hrElement = document.createElement("hr");
                     link.href = post.url;
                     link.textContent = post.title;
-                    parElement.textContent = post.description;
+                    parElement.textContent = post.excerpt;
                     titleElement.appendChild(link);
                     listItem.appendChild(titleElement);
                     listItem.appendChild(parElement);
