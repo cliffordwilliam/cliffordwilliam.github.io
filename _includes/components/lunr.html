@@ -1,3 +1,64 @@
 
 <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script>let postsObject={{%for post in site.posts%}"{{ post.url | xml_escape }}":{"title":"{{ post.title | xml_escape }}","description":"{{ post.description | xml_escape }}","author":"{{ post.author | xml_escape }}","category":"{{ post.category | xml_escape }}","content":{{post.content|strip_html|strip_newlines|jsonify}},"url":"{{ post.url | xml_escape }}"}{%if forloop.last==!1%},{%endif%}{%endfor%}};let documents=Object.values(postsObject);let idx=lunr(function(){this.ref('url');this.field('title',{boost:10});this.field('description');this.field('author');this.field('category');this.field('content');this.field('url');documents.forEach((doc)=>{this.add(doc)})});const input=document.querySelector("#search-input");const resultsList=document.querySelector("#search-results");input.addEventListener("input",()=>{const searchValue=input.value;resultsList.textContent="";if(searchValue){resultsList.classList.add("open");const results=idx.search(searchValue);if(results.length){results.forEach(result=>{const post=postsObject[result.ref];const listItem=document.createElement("li");const titleElement=document.createElement("h2");const parElement=document.createElement("p");const link=document.createElement("a");const hrElement=document.createElement("hr");link.href=post.url;link.textContent=post.title;parElement.textContent=post.description;titleElement.appendChild(link);listItem.appendChild(titleElement);listItem.appendChild(parElement);listItem.appendChild(hrElement);resultsList.appendChild(listItem)})}else{const listItem=document.createElement("li");listItem.textContent="No results found";resultsList.appendChild(listItem)}}else{resultsList.classList.remove("open")}})</script>
+<script>
+    let postsObject = {
+        {% for post in site.posts %}
+        "{{ post.url | xml_escape }}": {
+            "title": "{{ post.title | xml_escape }}",
+            "description": "{{ post.description | xml_escape }}",
+            "author": "{{ post.author | xml_escape }}",
+            "category": "{{ post.category | xml_escape }}",
+            "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+            "url": "{{ post.url | xml_escape }}"
+        }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+    };
+    let documents = Object.values(postsObject);
+    let idx = lunr(function () {
+        this.ref('url');
+        this.field('title', { boost: 10 });
+        this.field('description');
+        this.field('author');
+        this.field('category');
+        this.field('content');
+        this.field('url');
+
+        documents.forEach((doc) => {
+            this.add(doc);
+        });
+    });
+    const input = document.querySelector("#search-input");
+    const resultsList = document.querySelector("#search-results");
+    input.addEventListener("input", () => {
+        const searchValue = input.value;
+        resultsList.textContent = "";
+        if (searchValue) {
+            resultsList.classList.add("open");
+            const results = idx.search(searchValue);
+            if (results.length) {
+                results.forEach(result => {
+                    const post = postsObject[result.ref];
+                    const listItem = document.createElement("li");
+                    const titleElement = document.createElement("h2");
+                    const parElement = document.createElement("p");
+                    const link = document.createElement("a");
+                    const hrElement = document.createElement("hr");
+                    link.href = post.url;
+                    link.textContent = post.title;
+                    parElement.textContent = post.description;
+                    titleElement.appendChild(link);
+                    listItem.appendChild(titleElement);
+                    listItem.appendChild(parElement);
+                    listItem.appendChild(hrElement);
+                    resultsList.appendChild(listItem);
+                });
+            } else {
+                const listItem = document.createElement("li");
+                listItem.textContent = "No results found";
+                resultsList.appendChild(listItem);
+            }
+        } else {
+            resultsList.classList.remove("open");
+        }
+    });
+</script>
