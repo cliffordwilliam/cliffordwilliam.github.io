@@ -8,7 +8,7 @@
             {% for post in site.posts %}
             {
                 "name": "{{ post.title }}",
-                "text": "{{ post.content }}",
+                "text": "{{ post.description }}",
                 "categories": "{{ post.categories | join: ', ' }}",
                 "image": "{{ post.image }}"
             }{% if forloop.last == false %},{% endif %}
