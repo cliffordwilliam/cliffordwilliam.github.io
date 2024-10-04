@@ -1,7 +1,5 @@
 - name: Home
   link: "/"
-- name: Search
-  link: "/search.html"
 - name: Technology
   link: "/technology.html"
 - name: Personal
