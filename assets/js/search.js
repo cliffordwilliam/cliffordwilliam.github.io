@@ -1,16 +1,7 @@
 ---
 ---
 
-let documents = [
-    {% for post in site.posts %}
-    {
-        "name": "{{ post.title }}",
-        "text": "{{ post.description }}",
-        "categories": "{{ post.categories | join: ', ' }}",
-        "image": "{{ post.image }}"
-    }{% if forloop.last == false %},{% endif %}
-    {% endfor %}
-];
+let documents = {{ site.posts | jsonify }}
 let idx = lunr(function () {
     this.ref('name')
     this.field('text')
