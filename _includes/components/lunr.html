@@ -5,7 +5,7 @@
         {% for post in site.posts %}
         "{{ post.url | xml_escape }}": {
             "title": "{{ post.title | xml_escape }}",
-            "excerpt": "{{ post.excerpt | strip_html | strip_newlines | jsonify }}",
+            "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
             "author": "{{ post.author | xml_escape }}",
             "category": "{{ post.category | xml_escape }}",
             "content": {{ post.content | strip_html | strip_newlines | jsonify }},
