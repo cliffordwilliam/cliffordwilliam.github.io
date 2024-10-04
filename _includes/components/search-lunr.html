@@ -1,5 +1,17 @@
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
+    let documents = [
+        {% for post in site.posts %}
+        {
+            "name": "{{ post.title }}",
+            "text": "{{ post.description }}",
+            "categories": "{{ post.categories | join: ', ' }}",
+            "image": "{{ post.image }}"
+        }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+    ];
+</script>
+<script>
     let idx = lunr(function () {
         this.ref('name')
         this.field('text')
