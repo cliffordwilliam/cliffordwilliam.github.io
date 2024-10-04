@@ -3,6 +3,10 @@ title: "Search"
 description: "Find posts here."
 ---
 
+## Introudction
+
+Search here
+
 <form id="search-form">
     <input type="text" id="search-input">
 </form>
@@ -10,10 +14,10 @@ description: "Find posts here."
 <!-- List where search results will be rendered -->
 <ul id="search-results"></ul>
 
-<script>
+<!-- <script>
 let documents = {{ site.posts | jsonify }}
-</script>
+</script> -->
 <!-- Import lunr.js from unpkg.com -->
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 
-{% include components/search-lunr.html %}
+<!-- {% include components/search-lunr.html %} -->
