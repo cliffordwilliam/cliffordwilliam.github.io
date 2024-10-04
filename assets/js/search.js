@@ -1,3 +1,6 @@
+---
+---
+
 let documents = [
     {% for post in site.posts %}
     {
