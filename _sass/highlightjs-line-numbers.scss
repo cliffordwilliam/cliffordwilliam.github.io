@@ -8,8 +8,8 @@
     user-select: none;
 
     text-align: center;
-    color: #ccc;
-    border-right: 1px solid #CCC;
+    color: #999;
+    border-right: 1px solid #999;
     vertical-align: top;
     padding-right: 5px;
 
@@ -29,4 +29,9 @@ pre table {
   width: 100% !important;
   table-layout: fixed;
   word-break: break-word;
+}
+
+.hljs-ln td {
+    display: inline-block;
+    margin-right: 1em;
 }
