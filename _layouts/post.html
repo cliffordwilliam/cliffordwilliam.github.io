@@ -45,16 +45,16 @@ layout: default
 
   {% include components/utterances.html %}
 
-<div class="post-navigation thin-container">
+<div class="thin-container" id="post-navigation">
   {% if page.previous %}
     <a href="{{ page.previous.url }}" id="prev-button" aria-label="Go to previous post: {{ page.previous.title }}">
-      <div>← Previous Post: {{ page.previous.title }}</div>
+      Previous Post: {{ page.previous.title }}
     </a>
   {% endif %}
   
   {% if page.next %}
     <a href="{{ page.next.url }}" id="next-button" aria-label="Go to next post: {{ page.next.title }}">
-      <div>Newer Post: {{ page.next.title }} →</div>
+      Newer Post: {{ page.next.title }}
     </a>
   {% endif %}
 </div>
