@@ -47,13 +47,13 @@ layout: default
 
 <div class="thin-container" id="post-navigation">
   {% if page.previous %}
-    <a href="{{ page.previous.url }}" id="prev-button" aria-label="Go to previous post: {{ page.previous.title }}">
+    <a class="button" href="{{ page.previous.url }}" id="prev-button" aria-label="Go to previous post: {{ page.previous.title }}">
       Previous Post: {{ page.previous.title }}
     </a>
   {% endif %}
   
   {% if page.next %}
-    <a href="{{ page.next.url }}" id="next-button" aria-label="Go to next post: {{ page.next.title }}">
+    <a class="button" href="{{ page.next.url }}" id="next-button" aria-label="Go to next post: {{ page.next.title }}">
       Newer Post: {{ page.next.title }}
     </a>
   {% endif %}
