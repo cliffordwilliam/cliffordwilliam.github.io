@@ -45,5 +45,13 @@ layout: default
 
   {% include components/utterances.html %}
 
+  <a href="{{ page.previous.url }}">
+    <div>Previous Post</div>
+  </a>
+  
+  <a href="{{ page.next.url }}">
+    <div>Newer Post</div>
+  </a>
+
   <a href="{{ page.url | relative_url }}" hidden></a>
 </article>
