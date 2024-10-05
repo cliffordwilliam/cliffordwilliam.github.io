@@ -8,8 +8,8 @@
     user-select: none;
 
     text-align: center;
-    color: #999;
-    border-right: 1px solid #999;
+    color: #889;
+    border-right: 1px solid #667;
     vertical-align: top;
     padding-right: 5px;
 
@@ -34,4 +34,9 @@ pre table {
 .hljs-ln td {
     display: inline-block;
     margin-right: 1em;
+}
+
+pre button.hljs-copy-button {
+    width: auto;
+    height: auto;
 }
