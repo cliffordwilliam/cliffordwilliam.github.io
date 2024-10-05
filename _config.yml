@@ -36,3 +36,6 @@ sass:
   style: compressed
 exclude:
   - todo.md
+social_links:
+  linkedin: https://www.linkedin.com/in/clifford-william-05bb4220b/
+  github: https://github.com/cliffordwilliam

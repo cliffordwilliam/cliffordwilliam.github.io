@@ -1,3 +1,16 @@
-<svg id="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="2 1 15.13 26.13" width="120">
-	<path d="M3 2s25 6 6 23M10 18C9 31 2 24 16 26" stroke="#b4dcb4" stroke-width=".5" fill="none"></path>
+<svg 
+  id="arrow" 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="2 1 15.13 26.13" 
+  width="120" 
+  height="auto" 
+  role="img" 
+  aria-labelledby="arrowTitle">
+  <title id="arrowTitle">Arrow Icon</title>
+  <path 
+    d="M3 2s25 6 6 23M10 18C9 31 2 24 16 26" 
+    stroke="#b4dcb4" 
+    stroke-width="0.5" 
+    fill="none">
+  </path>
 </svg>

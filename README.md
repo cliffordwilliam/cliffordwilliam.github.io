@@ -11,15 +11,15 @@ This website serves as a centralized hub for my professional work, showcasing:
 
 ## Features
 
-- **Responsive Design**: Optimized for all screen sizes using **Bootstrap**.
-- **Blog with Tags**: Easily browse posts by tags.
+- **Responsive Design**: Optimized for all screen sizes using **Sass**.
+- **Blog with Categories**: Easily browse posts by categories.
 - **Reusable Components**: Built with Jekyll's powerful component system for maintainability.
 - **Cross-browser Compatibility**: Ensuring accessibility and a consistent experience across different browsers.
 - **GitHub Pages**: Hosted and continuously deployed directly from GitHub.
 
 ## Technologies
 
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Jekyll, Liquid Templating
 - **Hosting**: GitHub Pages
 - **Version Control**: Git
@@ -45,4 +45,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or would like to collaborate, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/clifford-william).
+If you have any questions or would like to collaborate, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/clifford-william-05bb4220b/).
