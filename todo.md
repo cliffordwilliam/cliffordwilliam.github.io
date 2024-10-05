@@ -13,3 +13,8 @@
 - [x] Fix and review with page speed insight, html checks and css checks.
 - [x] Add site icon and tab icon for seo.
 - [x] Generate the MIT license for this.
+- [ ] Check performance since I added cdn for highlightjs
+- [ ] Move the color to a var so I do not have to write it over and over again for the one below and the css
+
+<!-- <pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>sudo apt update
+sudo apt upgrade</code></pre> -->
