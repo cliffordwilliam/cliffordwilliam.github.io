@@ -45,13 +45,28 @@ layout: default
 
   {% include components/utterances.html %}
 
-  <a href="{{ page.previous.url }}">
-    <div>Previous Post</div>
-  </a>
+  <div id="post-navigation">
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}" aria-label="Go to previous post: {{ page.previous.title }}">
+        <div>←</div>
+        <div>
+          <div>Previous</div>
+          <div>{{ page.previous.title }}</div>
+        </div>
+      </a>
+    {% endif %}
+    
+    {% if page.next %}
+      <a href="{{ page.next.url }}" aria-label="Go to next post: {{ page.next.title }}">
+        <div>
+          <div>Next</div>
+          <div>{{ page.next.title }}</div>
+        </div>
+        <div>→</div>
+      </a>
+    {% endif %}
+  </div>
   
-  <a href="{{ page.next.url }}">
-    <div>Newer Post</div>
-  </a>
 
   <a href="{{ page.url | relative_url }}" hidden></a>
 </article>

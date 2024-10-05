@@ -1,0 +1,10 @@
+#post-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#post-navigation a {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
