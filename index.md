@@ -5,7 +5,7 @@ description: "I’m Clifford William, a Full Stack Developer and programming ent
 
 ## Introduction
 
-Hi, I’m **Clifford William**, a **Full Stack Developer** from **Indonesia** passionate about **programming**. Welcome to my personal website. Learn [about]({% link about.md %}) me, read blogs on [technology and programming]({% link technology.md %}) and [personal experiences]({% link personal.md %}), or find out how I created this site [in my Jekyll and GitHub post]({% post_url 2024-09-22-test-post %}).
+Hi, I’m **Clifford William**, a **Full Stack Developer** from **Indonesia** passionate about **programming**. Welcome to my personal website. Learn [about]({% link about.md %}) me, read blogs on [technology and programming]({% link technology.md %}) and [personal experiences]({% link personal.md %}), or find out how I created this site [in my Jekyll and GitHub post]({% post_url 2024-10-05-jekyll-and-github-pages %}).
 
 {% include components/post-cards-list.html limit=1 offset=0 excerpt=1 grid=0 margin-top=1 %}
 {% include components/post-cards-list.html limit=nil offset=1 excerpt=0 grid=1 margin-top=0 %}

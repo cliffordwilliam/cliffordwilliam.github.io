@@ -39,3 +39,6 @@ exclude:
 social_links:
   linkedin: https://www.linkedin.com/in/clifford-william-05bb4220b/
   github: https://github.com/cliffordwilliam
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
