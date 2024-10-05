@@ -24,3 +24,9 @@
 pre td {
     border-bottom: 0;
 }
+
+pre table {
+  width: 100% !important;
+  table-layout: fixed;
+  word-break: break-word;
+}
