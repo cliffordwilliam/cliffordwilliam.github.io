@@ -1,0 +1,17 @@
+---
+layout: null
+---
+{
+  "posts": [
+    {% for post in site.posts %}
+    {
+      "url": "{{ post.url | xml_escape }}",
+      "title": "{{ post.title | xml_escape }}",
+      "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+      "author": "{{ post.author | xml_escape }}",
+      "category": "{{ post.category | xml_escape }}",
+      "content": {{ post.content | strip_html | strip_newlines | jsonify }}
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ]
+}
