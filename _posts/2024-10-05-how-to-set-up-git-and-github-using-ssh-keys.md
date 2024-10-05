@@ -27,7 +27,7 @@ Think of SSH (Secure Shell) keys as a form of digital identity or credential. Ju
 
 Before getting started, it's a good practice to ensure your system is up to date. Run the following commands:
 
-<pre data-highlights='[{"lines": [2, 3, 4], "color": "#555"}, {"lines": [7], "color": "yellow"}]'><code>function fadeInPage() {
+<pre data-highlights='[{"lines": [2, 3, 4], "color": "#555"}]'><code>function fadeInPage() {
     if (!window.AnimationEvent) return;
     const fader = document.getElementById('fader');
     if (fader) fader.classList.add('fade-out');
