@@ -159,6 +159,8 @@ input {
 }
 
 .button, button {
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: inline-block;
     padding: 0.5em 1.25em;
     line-height: 1;

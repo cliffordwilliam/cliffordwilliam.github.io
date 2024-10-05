@@ -2,9 +2,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1em;
 }
 #post-navigation a {
     padding: 1em;
+    font-size: .8em;
 }
 #prev-button {
     margin-right: auto;

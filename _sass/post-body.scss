@@ -17,6 +17,7 @@ aside#toc-container {
 
     @include max-media-query() {
         position: static; // Adjust position in smaller screens
+        min-width: 0;
     }
 }
 
