@@ -15,6 +15,8 @@
 - [x] Generate the MIT license for this.
 - [x] Check performance since I added cdn for highlightjs
 - [ ] Move the color to a var so I do not have to write it over and over again for the one below and the css
+- [ ] Make a component to do the below code snippet
+- [ ] Review the blog about setting up git again
 
 <!-- <pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>sudo apt update
 sudo apt upgrade</code></pre> -->
