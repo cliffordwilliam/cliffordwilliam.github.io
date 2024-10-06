@@ -60,28 +60,22 @@ Before getting started, it's good practice to ensure your system is up to date. 
 <p>In Unix-like systems, when using certain commands like `sudo` you are required to type your password for authentication. When typing a password, the characters will not be displayed for security reasons. Just type as normal and press <kbd>Enter</kbd> once you've entered the correct password. This is designed like this for security reasons, like how website shows asterisks instead of the characters when you input passwords too.</p>
 </blockquote>
 
-```
-sudo apt update
-sudo apt upgrade
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>sudo apt update
+sudo apt upgrade</code></pre>
 
 ## 2. Install Git  
 
 Run the following commands to install the latest version of Git:
 
-```
-sudo add-apt-repository ppa:git-core/ppa
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
-sudo apt install git
-```
+sudo apt install git</code></pre>
 
 ## 3. Check Git Version  
 
 If the version is less than 2.28, repeat [step 1](#1-update-your-system).
 
-```
-git --version
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>git --version</code></pre>
 
 ## 4. Register Your GitHub Account  
 
@@ -98,10 +92,8 @@ With these options checked, your real email will not appear in commit metadata. 
 
 Since we are using Git to upload to GitHub, it makes sense to configure Git with your GitHub credentials. You will also set your commit email here. The following command contains my name and email; please edit it with your own credentials before running the command to configure Git:
 
-```
-git config --global user.name "Clifford William"
-git config --global user.email "ccliffordwilliam@gmail.com"
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>git config --global user.name "Clifford William"
+git config --global user.email "ccliffordwilliam@gmail.com"</code></pre>
 
 If you prefer to use your private email, please set the email using the private email from the previous step:
 
@@ -110,41 +102,31 @@ git config --global user.email "123456789+your-private-email-here@users.noreply.
 
 Before moving on, it’s a good idea to verify that Git recognizes your configuration. If the output is not as expected, repeat this step:
 
-```
-git config --get user.name
-git config --get user.email
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>git config --get user.name
+git config --get user.email</code></pre>
 
 ## 6. Configure Git to Ignore .DS_Store  
 
 If you are using macOS, you will want to instruct Git to ignore `.DS_Store` files, which are created for macOS directory metadata when you use Finder to look into a directory. Run the following commands:
 
-```
-echo .DS_Store >> ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global</code></pre>
 
 ## 7. Configure Git with GitHub Settings  
 
 Since GitHub has changed its default branch name from "master" to "main," you should configure your local Git settings accordingly:
 
-```
-git config --global init.defaultBranch main
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>git config --global init.defaultBranch main</code></pre>
 
 ## 8. Recommended Git Settings  
 
 This step is optional, but I recommend these settings for better readability in your Git output. Running the following command will enable syntax highlighting for keywords:
 
-```
-git config --global color.ui auto
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>git config --global color.ui auto</code></pre>
 
 I also suggest setting the default behavior for pulling changes from GitHub. When working online and then pulling updates into your local repository, you might want to use the merge strategy for clarity. This will create a new commit to mark the merge action:
 
-```
-git config --global pull.rebase false
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>git config --global pull.rebase false</code></pre>
 
 ## 9. Create SSH Key for This Machine
 
@@ -152,9 +134,7 @@ Now we will create an SSH key for this machine and register it with GitHub. This
 
 First, check if you already have an SSH key:
 
-```
-ls ~/.ssh/id_ed25519.pub
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>ls ~/.ssh/id_ed25519.pub</code></pre>
 
 If the output says "No such file or directory," then you do not have an SSH key. Let’s create one. 
 
@@ -162,9 +142,7 @@ The following command will prompt you for the save location; just press <kbd>Ent
 
 Note that if you do set a passphrase, you need to input it everytime you want to upload to GitHub.
 
-```
-ssh-keygen -t ed25519
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>ssh-keygen -t ed25519</code></pre>
 
 Great! Your machine now has an SSH key.
 
@@ -180,9 +158,7 @@ Follow these steps to register your SSH key:
 
 Select the key type as `Authentication Key` and name your key appropriately in camel case like `ubuntu-linux` so that at a glance you know which machine of yours own this key. You can view your SSH key using the following command:
 
-```
-cat ~/.ssh/id_ed25519.pub
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>cat ~/.ssh/id_ed25519.pub</code></pre>
 
 Just to confirm, but the output should start with `ssh-ed25519` and ends with `username@hostname`. If that is not the case then please redo from [step 9](#9-create-ssh-key-for-this-machine).
 
@@ -192,9 +168,7 @@ Copy the output and paste it into the "Key" field on GitHub. Finally, click `Add
 
 To confirm that your SSH key is working, we need to check what the Key fingerprint is. Do not type yes and hit <kbd>Enter</kbd> just yet after running the following command, run that command just to see the key fingerprint that is in the output:
 
-```
-ssh -T git@github.com
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>ssh -T git@github.com</code></pre>
 
 Then we check if your key fingerprint exists in [GitHub's public fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints).
 
@@ -202,9 +176,7 @@ If it is then type yes and hit <kbd>Enter</kbd>.
 
 If successful, you should see a message like this:
 
-```
-Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.
-```
+<pre data-highlights='[{"start": 0, "end": 0, "color": "#334"}]'><code>Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
 
 If you encounter an error, redo from [step 9](#9-create-ssh-key-for-this-machine).
 
