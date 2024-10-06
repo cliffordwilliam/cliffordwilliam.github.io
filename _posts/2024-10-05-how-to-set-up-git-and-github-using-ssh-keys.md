@@ -89,8 +89,8 @@ Go to [GitHub.com](https://github.com/) and register for an account. Use your re
 
 Note that the email you use for registration will become part of your commit metadata. If you prefer not to expose your real email in public repositories, you can use GitHub's private email feature. To enable this, log in to GitHub and go to [Email Settings](https://github.com/settings/emails). Make sure to check:
 
-- [x] Keep my email addresses private
-- [x] Block command line pushes that expose my email
+- Keep my email addresses private
+- Block command line pushes that expose my email
 
 With these options checked, your real email will not appear in commit metadata. Remember the private email GitHub provides under the "Keep my email addresses private" section; we will use it in the Git configuration.
 
