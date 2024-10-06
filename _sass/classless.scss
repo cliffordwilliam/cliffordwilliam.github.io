@@ -187,6 +187,10 @@ input {
     }
 }
 
+pre button {
+    padding: .25em 1.25em;
+}
+
 input, textarea {
     width: 100%;
     color: $grey-1;
