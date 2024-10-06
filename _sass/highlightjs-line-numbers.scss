@@ -42,3 +42,8 @@ pre button.hljs-copy-button {
     width: auto;
     height: auto;
 }
+
+pre table tbody tr {
+    display: block;
+    width: fit-content;
+}
