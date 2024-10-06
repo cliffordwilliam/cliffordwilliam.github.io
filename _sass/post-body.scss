@@ -23,6 +23,11 @@ aside#toc-container {
 
 div#post-body {
     flex: 1;
+    width: 1rem;
+
+    @include max-media-query() {
+        width: auto;
+    }
 }
 
 .thin-container {
