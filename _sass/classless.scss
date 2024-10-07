@@ -128,7 +128,12 @@ samp {
 }
 
 kbd {
-    box-shadow: 0 0 0 1px #111827, 0 3px 0 #111827;
+    box-sizing: border-box;
+    color: #1f2937;
+    box-shadow: #11182755 0px 0px 0px 1px, #11182755 0px 3px 0px 0px;
+    font-weight: 600;
+    background-color: #f3f4f6;
+    border-color: #e5e7eb;
 }
 
 pre>code {
