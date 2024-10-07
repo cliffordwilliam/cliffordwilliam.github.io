@@ -7,6 +7,9 @@
 #post-navigation a {
     padding: 1em;
     font-size: .8em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
 }
 #prev-button {
     margin-right: auto;

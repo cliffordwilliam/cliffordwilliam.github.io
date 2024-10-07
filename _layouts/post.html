@@ -48,13 +48,15 @@ layout: default
 <nav class="thin-container" id="post-navigation">
   {% if page.previous %}
     <a class="button" href="{{ page.previous.url }}" id="prev-button" aria-label="Go to previous post: {{ page.previous.title }}">
-      Previous Post: {{ page.previous.title }}
+      {% include icons/left-arrow.svg %}
+      <span>{{ page.previous.title }}</span>
     </a>
   {% endif %}
   
   {% if page.next %}
     <a class="button" href="{{ page.next.url }}" id="next-button" aria-label="Go to next post: {{ page.next.title }}">
-      Newer Post: {{ page.next.title }}
+      <span>{{ page.next.title }}</span>
+      {% include icons/right-arrow.svg %}
     </a>
   {% endif %}
 </nav>
