@@ -127,6 +127,10 @@ samp {
     white-space: pre-wrap;
 }
 
+code:not(pre code) {
+    color: #be185d;
+}
+
 kbd {
     box-sizing: border-box;
     color: #1f2937;
