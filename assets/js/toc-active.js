@@ -40,9 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
             activeItem.classList.remove('active');
         });
         
-        // Add active class to the first item in activeHeaders if it exists
+        // Add active class to the last item in activeHeaders if it exists
         if (activeHeaders.length > 0) {
-            activeHeaders[0].classList.add('active');
+            activeHeaders[activeHeaders.length - 1].classList.add('active'); // Last item
         }
     }
 
