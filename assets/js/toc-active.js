@@ -5,48 +5,29 @@ window.addEventListener('DOMContentLoaded', () => {
     const tocContainer = document.getElementById('toc-container');
     if (!tocContainer) return;
 
-    const activeHeaders = []; // Array to maintain active h2 elements
-
     const observer = new IntersectionObserver(entries => {
+        let foundActive = false;
+
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
             const tocLink = tocContainer.querySelector(`a[href="#${id}"]`).parentElement;
 
-            if (entry.boundingClientRect.top <= 0) {
-                // If the h2 is at or above the top of the viewport, add to activeHeaders
-                if (!activeHeaders.includes(tocLink)) {
-                    activeHeaders.push(tocLink);
-
-                    // If we just added a header, update the active class
-                    updateActiveClass();
-                }
-            } else {
-                // If the h2 is below the top of the viewport, remove it from activeHeaders
-                const index = activeHeaders.indexOf(tocLink);
-                if (index !== -1) {
-                    activeHeaders.splice(index, 1);
-                    
-                    // If we just removed a header, update the active class
-                    updateActiveClass();
+            if (entry.intersectionRatio > 0) {
+                // If an element is in view and we haven't found an active one yet
+                if (!foundActive) {
+                    // Remove active class from any currently active item
+                    tocContainer.querySelectorAll('li.active').forEach(activeItem => {
+                        activeItem.classList.remove('active');
+                    });
+                    // Set active class to the current item
+                    tocLink.classList.add('active');
+                    foundActive = true; // Mark that we've set an active item
                 }
             }
         });
     });
-
-    // Function to update the active class
-    function updateActiveClass() {
-        // Remove active class from all items
-        tocContainer.querySelectorAll('li.active').forEach(activeItem => {
-            activeItem.classList.remove('active');
-        });
-        
-        // Add active class to the last item in activeHeaders if it exists
-        if (activeHeaders.length > 0) {
-            activeHeaders[activeHeaders.length - 1].classList.add('active'); // Last item
-        }
-    }
-
-    // Observe all h2 elements with an id in the post body
+    
+    // Observe all h2 elements with an id in post body
     postBody.querySelectorAll('h2[id]').forEach(section => {
         observer.observe(section);
     });
