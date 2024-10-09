@@ -192,3 +192,4 @@ Congratulations! You’ve successfully set up Git and GitHub using SSH keys for 
 
 {% include components/highlightjs-core.html %}
 {% include components/highlightjs-bash.html %}
+{% include components/highlightjs-start.html %}

@@ -105,4 +105,5 @@ Enter passphrase for key '/home/cliffordw/.ssh/id_ed25519':</code></pre>
 {% include svg-images/ssh-protocol.svg %}
 
 {% include components/highlightjs-core.html %}
-{% include components/highlightjs-bash.html %}  
+{% include components/highlightjs-bash.html %}
+{% include components/highlightjs-start.html %}
