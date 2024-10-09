@@ -189,3 +189,6 @@ If you encounter an error, redo from [step 9](#9-create-ssh-key-for-this-machine
 ## Conclusion  
 
 Congratulations! You’ve successfully set up Git and GitHub using SSH keys for secure authentication. You are now ready to use Git to manage your projects and collaborate on GitHub with confidence.
+
+{% include components/highlightjs-core.html %}
+{% include components/highlightjs-bash.html %}
