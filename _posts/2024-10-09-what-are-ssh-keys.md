@@ -1,14 +1,14 @@
 ---
-title: "What are SSH Keys"  
-image: "https://cliffordwilliam.sirv.com/Images/jen-theodore-CiMITAJtb6I-unsplash.webp"  
-description: "Learn how GitHub's SSH key authentication works."  
-categories:  
-  - "Technology"  
+title: "What are SSH Keys"
+image: "https://cliffordwilliam.sirv.com/Images/jen-theodore-CiMITAJtb6I-unsplash.webp"
+description: "Learn how GitHub's SSH key authentication works."
+categories:
+  - "Technology"
 ---
 
 Discover how GitHub's SSH key authentication works.
 
-<!--more-->  
+<!--more-->
 
 ## Introduction
 
@@ -23,13 +23,13 @@ Encryption is the process of scrambling a message so that only authorized partie
 
 ## Symmetric Encryption
 
-Consider two people, Alice and Bob. 
+Consider two people, Alice and Bob.
 
 When Alice wants to send an encrypted message to Bob, she needs a way to securely share the key required to decrypt it. However, sending the key itself can be insecure.
 
 ## Asymmetric Encryption
 
-Asymmetric encryption addresses this problem. 
+Asymmetric encryption addresses this problem.
 
 Here's how it works:
 
@@ -49,6 +49,7 @@ The two keys are mathematically linked, meaning you cannot derive one key from t
 This way, the private key remains secure, and if Bob's private key is compromised, an unauthorized person could read all messages sent to Bob. However, they would not be able to decrypt messages sent from Alice to Bob, which would require Alice's private key.
 
 Asymmetric encryption is widely used in various applications, including:
+
 - HTTPS web pages
 - PGP for secure emails
 - Cryptocurrencies like Bitcoin
@@ -101,8 +102,6 @@ Enter passphrase for key '/home/cliffordw/.ssh/id_ed25519':</code></pre>
 7. The server verifies the signature with the corresponding public key in its authorized key list (the server uses the client's public key to decrypt the signed challenge).
 8. If verified, the server creates a session key to encrypt the session data.
 9. Secure communication begins using the session key.
-
-{% include svg-images/ssh-protocol.svg %}
 
 {% include components/highlightjs-core.html %}
 {% include components/highlightjs-bash.html %}
