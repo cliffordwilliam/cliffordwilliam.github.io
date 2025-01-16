@@ -1,7 +1,6 @@
 ---
 title: "Projects"
 description: "A collection of my personal and professional projects showcasing my skills and experience in web development."
-layout: default
 ---
 
 ## Introduction
